@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Install &mdash; trc-simulator 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="trc-simulator 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="About Choreonoid" href="about-choreonoid.html"/>
+        <link rel="prev" title="Welcome to trc-simulator’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trc-simulator
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#about">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assumed-environment-for-install">Assumed environment for install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preliminary-preparation-for-install">Preliminary preparation for install</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-ros-indigo">Install ROS Indigo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-required-package-without-simtrans">Install required package (without simtrans)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-required-package-simtrans">Install required package (simtrans)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-roki-package">Install RoKi package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#install-choreonoid-ros-plugin">Install Choreonoid ROS Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-choreonoid-ros-plugin">Update Choreonoid ROS Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-of-the-cmake-at-the-build-of-the-choreonoid">Setting of the CMake at the build of the Choreonoid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshoot">Troubleshoot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="about-choreonoid.html">About Choreonoid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-exec-simulation.html">Creating a simulation project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manual.html">Choreonoid ROS Plugin Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Choreonoid ROS Plugin Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">Links</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">trc-simulator</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Install</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/install.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="install">
+<h1>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h1>
+<p>This chapter explains how to install the Choreonoid ROS package.</p>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>The Choreonoid ROS package provides ROS package&#8217;s Choreonoid and ROS support for Choreonod&#8217;s plugin.</p>
+<p>The Choreonoid ROS package are comprised of the following ROS package.</p>
+<ul class="simple">
+<li>choreonoid_ros_pkg: Meta-package to build Choreonoid packages</li>
+<li>choreonoid_ros: Choreonoid catkin package</li>
+<li>choreonoid_plugin: Choreonoid plugins to publish ROS topic</li>
+<li>jvrc_models: Simulation models and tasks for JVRC</li>
+</ul>
+</div>
+<div class="section" id="assumed-environment-for-install">
+<h2>Assumed environment for install<a class="headerlink" href="#assumed-environment-for-install" title="Permalink to this headline">¶</a></h2>
+<p>Verified that the Choreonoid ROS package opertes on the following platform.</p>
+<ul class="simple">
+<li>Ubuntu 14.04 64-bit PC (AMD) desktop + ROS Indigo</li>
+</ul>
+<p>OS installation, please finish in advance.</p>
+<p>How to install OS, please see <a class="reference external" href="http://www.ubuntu.com/download/desktop/install-ubuntu-desktop">http://www.ubuntu.com/download/desktop/install-ubuntu-desktop</a></p>
+<p>ROS and required package installation is described in the next section.</p>
+</div>
+<div class="section" id="preliminary-preparation-for-install">
+<h2>Preliminary preparation for install<a class="headerlink" href="#preliminary-preparation-for-install" title="Permalink to this headline">¶</a></h2>
+<p>How to install ROS and required package.</p>
+<div class="section" id="install-ros-indigo">
+<h3>Install ROS Indigo<a class="headerlink" href="#install-ros-indigo" title="Permalink to this headline">¶</a></h3>
+<p>Run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo sh -c <span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+$ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116
+$ sudo apt-get update
+$ sudo apt-get install ros-indigo-desktop-full
+$ <span class="nb">echo</span> <span class="s2">&quot;source /opt/ros/indigo/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+$ <span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+<p>Procedure details, please see <a class="reference external" href="http://wiki.ros.org/indigo/Installation/Ubuntu">http://wiki.ros.org/indigo/Installation/Ubuntu</a></p>
+</div>
+<div class="section" id="install-required-package-without-simtrans">
+<h3>Install required package (without simtrans)<a class="headerlink" href="#install-required-package-without-simtrans" title="Permalink to this headline">¶</a></h3>
+<p>Run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install python-rosinstall python-catkin-tools
+</pre></div>
+</div>
+<p>After the intstallation, run the initialization and update of ROS package database:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo rosdep init
+$ rosdep update
+</pre></div>
+</div>
+<p>Run the following command, make sure without error:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ rosdep db
+          :
+        &lt;snip&gt;
+          :
+$ <span class="nb">echo</span> <span class="nv">$?</span>
+0
+</pre></div>
+</div>
+<p>Command rosdep details, please see <a class="reference external" href="http://wiki.ros.org/rosdep">http://wiki.ros.org/rosdep</a></p>
+</div>
+<div class="section" id="install-required-package-simtrans">
+<h3>Install required package (simtrans)<a class="headerlink" href="#install-required-package-simtrans" title="Permalink to this headline">¶</a></h3>
+<p>Run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo add-apt-repository ppa:hrg/daily
+$ sudo apt-get update
+$ sudo apt-get install python-pip openhrp meshlab imagemagick python-omniorb openrtm-aist-python
+$ git clone https://github.com/fkanehiro/simtrans.git
+$ <span class="nb">cd</span> simtrans
+$ sudo pip install -r requirements.txt
+$ sudo python setup.py install
+</pre></div>
+</div>
+<p>Confirm installation:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ which simtrans
+/usr/local/bin/simtrans
+$ simtrans -h
+usage: simtrans <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-i FILE<span class="o">]</span> <span class="o">[</span>-o FILE<span class="o">]</span> <span class="o">[</span>-f FORMAT<span class="o">]</span> <span class="o">[</span>-c<span class="o">]</span> <span class="o">[</span>-b<span class="o">]</span> <span class="o">[</span>-t FORMAT<span class="o">]</span>
+                <span class="o">[</span>-p PREFIX<span class="o">]</span> <span class="o">[</span>-s<span class="o">]</span> <span class="o">[</span>-e SPGR<span class="o">]</span> <span class="o">[</span>-v<span class="o">]</span>
+
+Convert robot simulation model from one another.
+          :
+        &lt;snip&gt;
+          :
+$ <span class="nb">echo</span> <span class="nv">$?</span>
+0
+</pre></div>
+</div>
+<p>Command simtrans details, please see <a class="reference external" href="https://github.com/fkanehiro/simtrans">https://github.com/fkanehiro/simtrans</a></p>
+</div>
+<div class="section" id="install-roki-package">
+<h3>Install RoKi package<a class="headerlink" href="#install-roki-package" title="Permalink to this headline">¶</a></h3>
+<p>In this course to install the RoKi because it uses Choreonoid RoKi plugin.
+Install RoKi and required package, run the following command.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo install roki roki-dev
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="install-choreonoid-ros-plugin">
+<h2>Install Choreonoid ROS Plugin<a class="headerlink" href="#install-choreonoid-ros-plugin" title="Permalink to this headline">¶</a></h2>
+<p>How to install Choreonoid ROS plugin.</p>
+<p>To use the package, you first have to create catkin workspace:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ mkdir -p ~/catkin_ws/src
+$ <span class="nb">cd</span> ~/catkin_ws
+$ catkin init
+</pre></div>
+</div>
+<p>Then, checkout choreonoid_ros_pkg under catkin_ws/src folder:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/catkin_ws/src
+$ wstool init
+$ wstool <span class="nb">set</span> choreonoid_ros_pkg https://github.com/fkanehiro/choreonoid_ros_pkg.git --git -y
+$ wstool update choreonoid_ros_pkg
+</pre></div>
+</div>
+<p>Install dependent packages:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/catkin_ws
+$ rosdep install --from-paths src --ignore-src --rosdistro <span class="nv">$ROS_DISTRO</span> -y
+</pre></div>
+</div>
+<p>Install Choreonoid with RoKi plugin, run the following command.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Create &#8216;additional_cmake_args&#8217; file under the &#8216;~/catkin_ws/src/choreonoid_ros_pkg/choreonoid_ros&#8217; directory.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>$ touch ~/catkin_ws/src/choreonoid_ros_pkg/choreonoid_ros/additional_cmake_args
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Edit &#8216;additional_cmake_args&#8217; file.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>$ gedit ~/catkin_ws/src/choreonoid_ros_pkg/choreonoid_ros/additional_cmake_args
+</pre></div>
+</div>
+<p>Edit after the save.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>-DBUILD_ROKI_PLUGIN<span class="o">=</span>ON -DROKI_DIR<span class="o">=</span>/usr
+</pre></div>
+</div>
+</div></blockquote>
+<p>Details please see &#8216;Setting of the CMake at the build of the Choreonoid&#8217;.</p>
+</div></blockquote>
+<p>Build and install catkin packages:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/catkin_ws
+$ <span class="nb">export</span> <span class="nv">CMAKE_PREFIX_PATH</span><span class="o">=</span>~/catkin_ws/devel:/opt/ros/indigo
+$ catkin config --install
+$ catkin build choreonoid_ros_pkg
+$ <span class="nb">source</span> install/setup.bash
+</pre></div>
+</div>
+<p>To use the URDF/SDF based models in Choreonoid, please install sdfloader as well:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/catkin_ws/src
+$ wstool <span class="nb">set</span> choreonoid_sdfloader_plugin https://github.com/fkanehiro/choreonoid-sdfloader-plugin.git --git -y
+$ wstool update choreonoid_sdfloader_plugin
+$ <span class="nb">cd</span> ~/catkin_ws
+$ catkin build choreonoid_sdfloader_plugin
+</pre></div>
+</div>
+<p>Changing ROS default setup.</p>
+<p>Modify line of &#8216;source /opt/ros/indigo/setup.bash&#8217; in the ~/.bashrc by any text editor:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">source</span> ~/catkin_ws/install/setup.bash
+</pre></div>
+</div>
+<ul>
+<li><p class="first">If reverting ROS default setup.</p>
+<p>Modify line of &#8216;source ~/catkin_ws/install/setup.bash&#8217; in the ~/.bashrc by any text editor:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/indigo/setup.bash
+</pre></div>
+</div>
+<p>After reverting, run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="update-choreonoid-ros-plugin">
+<h2>Update Choreonoid ROS Plugin<a class="headerlink" href="#update-choreonoid-ros-plugin" title="Permalink to this headline">¶</a></h2>
+<p>How to update Choreonoid ROS plugin.</p>
+<p>Run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/catkin_ws/src
+$ wstool update choreonoid_ros_pkg
+$ wstool update choreonoid_sdfloader_plugin <span class="o">(</span>*<span class="o">)</span>
+$ <span class="nb">cd</span> ~/catkin_ws
+$ catkin clean -b
+$ catkin build choreonoid_ros_pkg
+$ catkin build choreonoid_sdfloader_plugin <span class="o">(</span>*<span class="o">)</span>
+$ <span class="nb">source</span> install/setup.bash
+</pre></div>
+</div>
+<p>(*) If you have installed.</p>
+</div>
+<div class="section" id="setting-of-the-cmake-at-the-build-of-the-choreonoid">
+<h2>Setting of the CMake at the build of the Choreonoid<a class="headerlink" href="#setting-of-the-cmake-at-the-build-of-the-choreonoid" title="Permalink to this headline">¶</a></h2>
+<p>If you want to including the other plugins at the time of build of the Choreonoid.
+In the following steps, you can make it.</p>
+<ol class="arabic">
+<li><p class="first">Create &#8216;additional_cmake_args&#8217; file under the &#8216;~/catkin_ws/src/choreonoid_ros_pkg/choreonoid_ros&#8217; directory.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ touch ~/catkin_ws/src/choreonoid_ros_pkg/choreonoid_ros/additional_cmake_args
+</pre></div>
+</div>
+</li>
+<li><p class="first">Edit &#8216;additional_cmake_args&#8217; file.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ gedit ~/catkin_ws/src/choreonoid_ros_pkg/choreonoid_ros/additional_cmake_args
+</pre></div>
+</div>
+<p>e.g. If you want to append the OpenRTM plugin.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>-DENABLE_CORBA<span class="o">=</span>ON -DBUILD_CORBA_PLUGIN<span class="o">=</span>ON -DBUILD_OPENRTM_PLUGIN<span class="o">=</span>ON -DBUILD_OPENRTM_SAMPLES<span class="o">=</span>ON
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run the following command.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/catkin_ws
+$ catkin clean -a
+$ catkin build choreonoid_ros_pkg
+$ catkin build choreonoid_sdfloader_plugin <span class="o">(</span>*<span class="o">)</span>
+$ <span class="nb">source</span> install/setup.bash
+</pre></div>
+</div>
+<p>(*) If you want to install.</p>
+</li>
+</ol>
+<p>For setting information, please refer to the <a class="reference external" href="http://choreonoid.org/en/manuals/1.5/install/options.html">http://choreonoid.org/en/manuals/1.5/install/options.html</a> and the like.</p>
+</div>
+<div class="section" id="troubleshoot">
+<h2>Troubleshoot<a class="headerlink" href="#troubleshoot" title="Permalink to this headline">¶</a></h2>
+<p>Solve of a problem of after installation.</p>
+<ul>
+<li><p class="first">If startup problem of &#8216;roslaunch choreonoid_ros jvrc-1-rviz.launch&#8217;.</p>
+<p>Checking the catkin config value of &#8216;Extending&#8217;:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/catkin_ws
+$ catkin config
+           :
+         &lt;snip&gt;
+           :
+Extending:             <span class="o">[</span>env<span class="o">]</span> /opt/ros/indigo
+           :
+         &lt;snip&gt;
+           :
+</pre></div>
+</div>
+<ul>
+<li><p class="first">if case &#8216;[env | cached] &lt;path to your home directory&gt;/catkin_ws/devel:/opt/ros/indigo&#8217;:</p>
+<p>Run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> install/setup.bash
+$ roslaunch choreonoid_ros jvrc-1-rviz.launch
+</pre></div>
+</div>
+</li>
+<li><p class="first">if case &#8216;[env] /opt/ros/indigo&#8217;:</p>
+<p>Run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">export</span> <span class="nv">CMAKE_PREFIX_PATH</span><span class="o">=</span>~/catkin_ws/devel:/opt/ros/indigo
+$ <span class="nb">source</span> install/setup.bash
+$ roslaunch choreonoid_ros jvrc-1-rviz.launch
+</pre></div>
+</div>
+</li>
+<li><p class="first">if case &#8216;[cached] /opt/ros/indigo&#8217; or other case:</p>
+<p>Run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ catkin clean -a
+$ <span class="nb">export</span> <span class="nv">CMAKE_PREFIX_PATH</span><span class="o">=</span>~/catkin_ws/devel:/opt/ros/indigo
+$ catkin build choreonoid_ros_pkg
+$ catkin build choreonoid_sdfloader_plugin <span class="o">(</span>*<span class="o">)</span>
+$ <span class="nb">source</span> install/setup.bash
+$ roslaunch choreonoid_ros jvrc-1-rviz.launch
+</pre></div>
+</div>
+<p>(*) If you want to install.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="about-choreonoid.html" class="btn btn-neutral float-right" title="About Choreonoid" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to trc-simulator’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Advanced Industrial Science and Technology (AIST).
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
