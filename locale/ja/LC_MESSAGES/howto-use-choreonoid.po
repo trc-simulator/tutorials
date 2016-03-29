@@ -1,0 +1,623 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: trc-simulator 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-29 10:08+0900\n"
+"PO-Revision-Date: 2016-03-29 11:40+0900\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../../howto-use-choreonoid.rst:3
+msgid "Basic usage of Choreonoid"
+msgstr "Choreonoidの基本操作"
+
+#: ../../howto-use-choreonoid.rst:8
+msgid "Running"
+msgstr "起動方法"
+
+#: ../../howto-use-choreonoid.rst:10
+msgid ""
+"Specify path of sample project \"SR1Walk.cnoid\" to load after the startup."
+msgstr ""
+"サンプルプロジェクト「SR1Walk.cnoid」を起動と同時に開くため、端末を開いて以下"
+"のコマンドを実行してください。"
+
+#: ../../howto-use-choreonoid.rst:16
+msgid "Following display should be appeared."
+msgstr "以下のような画面が表示されます。"
+
+#: ../../howto-use-choreonoid.rst:22
+msgid ""
+"Specify following option to load OpenHRP format model after the startup."
+msgstr ""
+"Choreonoidの起動と同時に、OpenHRP形式のモデルを開く場合には以下のようにオプ"
+"ションを指定して実行することが可能です。"
+
+#: ../../howto-use-choreonoid.rst:30
+msgid "Main display"
+msgstr "画面構成"
+
+#: ../../howto-use-choreonoid.rst:32
+msgid ""
+"Components of \"main window\" shown after the Choreonoid startup is shown as "
+"follows."
+msgstr ""
+"Choreonoidを起動すると表示される「メインウィンドウ」の構成は以下のようになっ"
+"ています。"
+
+#: ../../howto-use-choreonoid.rst:37
+msgid "Main menu"
+msgstr "メインメニュー"
+
+#: ../../howto-use-choreonoid.rst:39
+msgid ""
+"In above image, the main menu is shown in title bar of the window. In "
+"default setting of Ubuntu, main menu is shown in the menu bar of whole "
+"desktop, but you can change the setting on [system setting]-[display]-"
+"[behavior]-[show window menu]."
+msgstr ""
+"この例ではメインメニューはウィンドウのタイトルバーの中に表示しています。"
+"Ubuntuの標準設定ではメニューバーの中ですが、[システム設定]-[外観]-[挙動]-"
+"[ウィンドウのメニューを表示]で変更可能です。"
+
+#: ../../howto-use-choreonoid.rst:43
+msgid "Tool bar area"
+msgstr "ツールバー領域"
+
+#: ../../howto-use-choreonoid.rst:45
+msgid ""
+"Displays various tool bars. Tool bars can be turned on/off by [main menu]-"
+"[view]-[show toolbar]."
+msgstr ""
+"各種ツールバーを表示します。表示するツールバーの種類は[メインメニュー]-[表"
+"示]-[ツールバーの表示]でOn/Offが可能です。"
+
+#: ../../howto-use-choreonoid.rst:49
+msgid "View area"
+msgstr "ビュー領域"
+
+#: ../../howto-use-choreonoid.rst:51
+msgid ""
+"Displays various views. In above image, \"item\" \"property\" \"link\" "
+"\"body/link\" \"joint slider\" \"scene\" \"message\" \"Python console\" view "
+"is shown. You can also stack the view and switch by tab."
+msgstr ""
+"各種ビューを表示します。この例では「アイテム」「プロパティ」「リンク」「ボ"
+"ディ／リンク」「関節スライダ」「シーン」「メッセージ」「Pythonコンソール」の"
+"ビューを表示しています。複数のビューを重ねてタブで切り替えることも可能です。"
+
+#: ../../howto-use-choreonoid.rst:55
+msgid ""
+"The view can be turned on/off by [main menu]-[view]-[show view]. By "
+"selecting [create view] you can also create multiple views of same kind as "
+"well. For example, you can create multiple \"scene\" views to display "
+"multiple view angles of simulation world or display robot camera."
+msgstr ""
+"表示するビューの種類は[メインメニュー]-[表示]-[ビューの生成]でOn/Offが可能"
+"で、[ビューの生成]で同じビューを複数表示することが可能です。例えば、シーン"
+"ビューを複数表示して、複数視点のシミュレーション世界を表示したり、ロボットの"
+"カメラ映像などを表示することができます。"
+
+#: ../../howto-use-choreonoid.rst:59
+msgid ""
+"In above image, messages in red color is displayed. When there is problem in "
+"Choreonoid, warning and error messages are displayed in the message view. "
+"Please check these messages in case of trouble (in above case, the message "
+"complains there is no ODE or Bullet plugins, which cause no problem)."
+msgstr ""
+"この例ではメッセージビューに赤字のメッセージがいくつか表示されています。"
+"Choreonoidの機能が正常に動作しない場合は、警告やエラーメッセージがメッセージ"
+"ビューに表示されているかもしれませんので確認して見てください。（この例ではODE"
+"やBulletなどのシミュレーションエンジンが使用できない旨の警告が表示されていま"
+"すが問題ありません）"
+
+#: ../../howto-use-choreonoid.rst:64
+msgid "Status bar"
+msgstr "ステータスバー"
+
+#: ../../howto-use-choreonoid.rst:66
+msgid ""
+"Status bar under the main window displays short message about the current "
+"process proceeding in Choreonoid."
+msgstr ""
+"メインウィンドウ下部のステータスバーは、Choreonoid上で現在進行中の処理内容を"
+"簡潔なメッセージで知らせるための領域です。"
+
+#: ../../howto-use-choreonoid.rst:68
+msgid ""
+"Region of the status bar is separated to two parts. Left part displays "
+"begging and end of process. Right part displays status of the object "
+"currently pointed in the current view."
+msgstr ""
+"ステータスバーの領域は内部で２つに分かれており、基本的に左側では処理の開始や"
+"終了を告げるメッセージを表示し、右側では作業中のビューでマウスカーソルが指し"
+"ているオブジェクトの状態を表示するようになっています。"
+
+#: ../../howto-use-choreonoid.rst:73
+msgid ""
+"Due to problem of some graphics driver, GUI elements of Choreonoid sometimes "
+"give no response except for 3D display. In such case, please once resize the "
+"Choreonoid window and the GUI elements will activated again."
+msgstr ""
+"グラフィックスドライバとの相性問題により、まれにChoreonoid内の画面をクリック"
+"しても3D表示部分以外は反応がなくなる場合があります。そのような場合は"
+"Choreonoidのウィンドウを一旦全画面表示を解除し、再び全画面にする（あるいはそ"
+"の逆の手順を行う）と復活します。"
+
+#: ../../howto-use-choreonoid.rst:77
+msgid "Control of view angle"
+msgstr "視点操作"
+
+#: ../../howto-use-choreonoid.rst:79
+msgid ""
+"By placing the mouse cursor over the scene view and apply following actions, "
+"you can control the 3D graphics of the simulated world."
+msgstr ""
+"シーンビューにマウスカーソルを合わせて、以下の操作を行うことによりシミュレー"
+"ション世界の3Dグラフィックス表示を自在に操ることが可能です。"
+
+#: ../../howto-use-choreonoid.rst:81
+msgid "Left button click and drag: Rotate around the point you have clicked."
+msgstr "左ボタンドラッグでクリックした点周りに回転"
+
+#: ../../howto-use-choreonoid.rst:82
+msgid "Center button click and drag: Parallel translation."
+msgstr "中ボタンドラッグで並進"
+
+#: ../../howto-use-choreonoid.rst:83
+msgid "Wheel: Extend or shrink."
+msgstr "ホイールで拡大縮小"
+
+#: ../../howto-use-choreonoid.rst:84
+msgid "Shift+Left drag: Snap horizontally or vertically."
+msgstr "Shift+左ドラッグで真横、真上などにスナップ"
+
+#: ../../howto-use-choreonoid.rst:86
+msgid ""
+"Also, you can change the view angle to overview the whole simulation world "
+"by clicking the following button on the tool bar. This button is useful when "
+"you lost your current view angle and want to reset."
+msgstr ""
+"また、ツールバーの下記シーンバーにあるボタン(全ての物体が見えるように視点を移"
+"動)を押すことで全体を俯瞰する視点に設定することが可能です。視点位置がわからな"
+"くなった場合の初期化などに利用できます。"
+
+#: ../../howto-use-choreonoid.rst:93
+msgid "Switching of camera"
+msgstr "カメラの切り替え方法"
+
+#: ../../howto-use-choreonoid.rst:95
+msgid ""
+"The camera used to render view angle can be switched using pull down widget "
+"in the scene bar. Click and focus the scene view you want to switch and "
+"select the camera you want to display on the pull down widget."
+msgstr ""
+"シーンビューの表示に使用するカメラは、シーンバーのプルダウンで選択します。変"
+"更したいシーンビューをフォーカスしておき、プルダウンメニューから表示したいカ"
+"メラを選択してください。"
+
+#: ../../howto-use-choreonoid.rst:101
+msgid "Default cameras"
+msgstr "デフォルトのカメラ"
+
+#: ../../howto-use-choreonoid.rst:103
+msgid "Following cameras are prepared as default."
+msgstr "デフォルトでは以下のカメラが用意されています。"
+
+#: ../../howto-use-choreonoid.rst:105
+msgid "System - Perspective"
+msgstr "System - Perspectiveは透視投影"
+
+#: ../../howto-use-choreonoid.rst:107
+msgid "System - Orthographic"
+msgstr "System - Orthographicは平行投影"
+
+#: ../../howto-use-choreonoid.rst:110
+msgid "Robot cameras"
+msgstr "ロボットのカメラ"
+
+#: ../../howto-use-choreonoid.rst:112
+msgid ""
+"When the robot model loaded in Choreonoid has cameras, it will be listed to "
+"pull down widget as follows."
+msgstr ""
+"ロボットにカメラが搭載されている場合、以下の形式でリストアップされます。"
+
+#: ../../howto-use-choreonoid.rst:114
+msgid "Robot_name - Camera_name"
+msgstr "<ロボット名>-<カメラ名>"
+
+#: ../../howto-use-choreonoid.rst:117
+msgid "Tracking camera"
+msgstr "追跡カメラ"
+
+#: ../../howto-use-choreonoid.rst:119
+msgid "You can automatically track the model by using BodyTrackingCameraItem."
+msgstr ""
+"カメラの視点をモデルに追従させたい場合などに、追跡視点に設定することが可能で"
+"す。"
+
+#: ../../howto-use-choreonoid.rst:121
+msgid ""
+"Create \"BodyTrackingCameraItem\" as a child item for the target BodyItem "
+"and check the item."
+msgstr ""
+"追従させたいモデルのBodyItemの子アイテムとて、\"BodyTrackingCameraItem\"を生"
+"成し、チェックを入れる"
+
+#: ../../howto-use-choreonoid.rst:123
+msgid ""
+"Name of the item will be appeared on the camera selection widget. Select the "
+"name."
+msgstr "カメラ選択でこのアイテム名のカメラを選択"
+
+#: ../../howto-use-choreonoid.rst:125
+msgid ""
+"If you set \"Keep Relative Attitude\" property to true, direction of the "
+"camera will be also tracked."
+msgstr ""
+"\"Keep Relative Attitude\"プロパティをtrueにしておくと、カメラの向きもロボッ"
+"トに追従します"
+
+#: ../../howto-use-choreonoid.rst:129
+msgid "Control shading"
+msgstr "シェーディングの設定"
+
+#: ../../howto-use-choreonoid.rst:131
+msgid ""
+"Default scene view of Choreonoid is configured with shading enabled. If you "
+"want to disable the shading, click configure button of the scene bar and "
+"uncheck the lighting option."
+msgstr ""
+"シーンビューはデフォルトではシェーディングが有効になっています。シェーディン"
+"グを無効にしたい場合、シーンバーの設定ボタンを押して、以下のダイアログ上で照"
+"明オプションを無効にしてください。"
+
+#: ../../howto-use-choreonoid.rst:137
+msgid "Wire frame display"
+msgstr "ワイヤーフレーム表示"
+
+#: ../../howto-use-choreonoid.rst:139
+msgid ""
+"With wire frame display, you can have transparent view of all the objects. "
+"To switch to wire frame mode, click \"Toggle the wireframe mode\" button of "
+"the scene bar."
+msgstr ""
+"ワイヤーフレーム表示を使うと、全てのオブジェクトを透過して閲覧することができ"
+"ます。ワイヤーフレーム表示モードに切り替えるには、シーンバーの「ワイヤーフ"
+"レーム表示」ボタンを押してください。"
+
+#: ../../howto-use-choreonoid.rst:145
+msgid "Collision display"
+msgstr "干渉情報の表示"
+
+#: ../../howto-use-choreonoid.rst:147
+msgid ""
+"During the simulation, we sometimes want to check the collision between the "
+"objects. To switch to the collision line visible mode, click \"Toggle the "
+"collision line visibility\" button of the scene bar. Then click on the "
+"AISTSimulator item on the item view and set the \"Record collision data\" "
+"property to True."
+msgstr ""
+"シミュレーション中に、物体間の接触を知りたいことがあります。干渉情報表示モー"
+"ドに切り替えるには、シーンバー上の「干渉線の表示」をクリックしてください。そ"
+"の後、アイテムビュー上にあるAISTSimulatorアイテムをクリックし、「干渉データの"
+"記録」プロパティをtrueに変更してください。"
+
+#: ../../howto-use-choreonoid.rst:154
+msgid "Start/pause/stop the simulation"
+msgstr "シミュレーションの開始、一時停止、停止方法"
+
+#: ../../howto-use-choreonoid.rst:156
+msgid ""
+"To start the simulation, click on the following buttons on the \"simulation"
+"\" bar."
+msgstr ""
+"シミュレーションを開始するには、ツールバーの「シミュレーションバー」にある以"
+"下のボタンで行います。"
+
+#: ../../howto-use-choreonoid.rst:160
+msgid "Each buttons has following functions respectively (from left side);"
+msgstr "左からそれぞれ以下のボタンになっています。"
+
+#: ../../howto-use-choreonoid.rst:162
+msgid "Start the simulation from initial position."
+msgstr "初期位置からのシミュレーションを開始"
+
+#: ../../howto-use-choreonoid.rst:163
+msgid "Start the simulation from current position."
+msgstr "現在位置からのシミュレーションを開始"
+
+#: ../../howto-use-choreonoid.rst:164
+msgid "Pause the simulation."
+msgstr "シミュレーションの一時停止"
+
+#: ../../howto-use-choreonoid.rst:165
+msgid "Stop the simulation."
+msgstr "シミュレーションの停止"
+
+#: ../../howto-use-choreonoid.rst:167
+msgid ""
+"You can once stop the simulation and play the result using the slider on the "
+"\"time\" bar. You can enter the exact time on the time bar as well."
+msgstr ""
+"シミュレーションを一時停止しておき、タイムバーのスライダーやシミュレーション"
+"時間を直接入力してシミュレーション結果をみることができます。"
+
+#: ../../howto-use-choreonoid.rst:171
+msgid ""
+"To restart the paused simulation, click the \"pause the simulation\" button."
+msgstr ""
+"一時停止したシミュレーションを再開するには「シミュレーションの一時停止」ボタ"
+"ンをクリックします。"
+
+#: ../../howto-use-choreonoid.rst:175
+msgid "Save/load/play the simulation result"
+msgstr "シミュレーション結果の保存、読み込み、再生方法"
+
+#: ../../howto-use-choreonoid.rst:177
+msgid ""
+"In Choreonoid, we can save the simulation result (trajectory data) and later "
+"play the simulation result using the data. Here, we will explain how to do "
+"using sample project \"PA10Pickup.cnoid\"."
+msgstr ""
+"Choreonoidでは、シミュレーション結果（動作軌道データ）を保存し、そのデータを"
+"使ってシミュレーション結果を再生することができます。以下ではサンプルプロジェ"
+"クト「PA10Pickup.cnoid」を例に説明します。"
+
+#: ../../howto-use-choreonoid.rst:181
+msgid "Save the simulation result"
+msgstr "シミュレーション結果の保存"
+
+#: ../../howto-use-choreonoid.rst:183
+msgid "Run Choreonoid"
+msgstr "Choreonoidを起動します。"
+
+#: ../../howto-use-choreonoid.rst:189
+msgid ""
+"After simulation is started, BodyMotion items named \"AISTSimulator-XXX\" is "
+"generated under the BodyItem of moving objects such as robot. These "
+"BodyMotion items stores motion trajectory data of simulation result. In "
+"following example, BodyMotion items are generated for \"PA10\" and \"box3\" "
+"items."
+msgstr ""
+"シミュレーションを開始すると、ロボット等、動く物体のBodyItemの下（あるいはコ"
+"ントローラの下）に “AISTSimulator-XXX” といった名前でBodyMotionアイテムが生成"
+"されます。これがシミュレーション結果を格納している動作軌道データです。以下の"
+"例では、\"PA10\"と\"box3\"アイテムにBodyMotionアイテムが生成されています。"
+
+#: ../../howto-use-choreonoid.rst:193
+msgid "Before simulation starts"
+msgstr "シミュレーション開始前"
+
+#: ../../howto-use-choreonoid.rst:194
+msgid "After simulation starts"
+msgstr "シミュレーション開始後"
+
+#: ../../howto-use-choreonoid.rst:198
+msgid ""
+"Select each BodyMotion items (it is OK to select multiple items as well) and "
+"save the data by selecting [file]-[save as] menu."
+msgstr ""
+"各BodyMotionアイテムを選択状態にして（まとめて選択してもOK)、[ファイル]-[名前"
+"を付けて選択アイテムを保存]で保存します。"
+
+#: ../../howto-use-choreonoid.rst:202
+msgid ""
+"Files are saved for each BodyMotion items, so please specify the file name "
+"containing name of parent item."
+msgstr ""
+"保存するファイルは各BodyMotionアイテム毎になりますので、どのアイテムのデータ"
+"かがわかるようなファイル名にしておきます。"
+
+#: ../../howto-use-choreonoid.rst:206
+msgid ""
+"To select multiple items in item view, press Ctrl key and click the item."
+msgstr ""
+"アイテムビューで複数のBodyItemをまとめて選択するには、Ctrlキーを押しながらク"
+"リックして選択します。"
+
+#: ../../howto-use-choreonoid.rst:208
+msgid ""
+"If you press Shift key and click, multiple items in range can be selected."
+msgstr ""
+"Shiftキーを押しながらクリックすると、リストの始点・終点間を選択することができ"
+"ます。"
+
+#: ../../howto-use-choreonoid.rst:211
+msgid "Load and play the simulation result"
+msgstr "シミュレーション結果の読み込みと再生"
+
+#: ../../howto-use-choreonoid.rst:213
+msgid "Let's, once close the Choreonoid and restart."
+msgstr ""
+"シミュレーションを実行したChoreonoidを一旦終了し、再度Choreonoidを起動しま"
+"す。"
+
+#: ../../howto-use-choreonoid.rst:219
+msgid ""
+"Select the target BodyItem in the item view, and load corresponding "
+"BodyMotion item from file. Select [file]-[open...]-[body motion] menu."
+msgstr ""
+"アイテムビューで該当するBodyItemを選択した状態で対応するファイルの読み込みを"
+"行います。読み込みは、[ファイル]-[読み込み]-[ボディモーション]で行います。"
+
+#: ../../howto-use-choreonoid.rst:223
+msgid "Before loading (BodyItem is selected)"
+msgstr "読み込み前(BodyItemを選択)"
+
+#: ../../howto-use-choreonoid.rst:224
+msgid "After loading"
+msgstr "読み込み後"
+
+#: ../../howto-use-choreonoid.rst:228
+msgid "Load the corresponding BodyMotion data for the other BodyItems as well."
+msgstr "同様に、他のBodyItemのデータを読み込みます。"
+
+#: ../../howto-use-choreonoid.rst:230
+msgid ""
+"To play the loaded motion data, we have to select the BodyMotion items "
+"(select all the BodyMotion items if there is multiple objects)."
+msgstr ""
+"読み込んだ動作データを再生するには、それらを選択しておく必要があります。（複"
+"数物体がある場合は、全てのBodyMotionアイテムを選択します）"
+
+#: ../../howto-use-choreonoid.rst:234
+msgid ""
+"Click \"start animation\" button on the time bar to play the simulation "
+"result."
+msgstr ""
+"タイムバーの「アニメーションを開始」ボタンでシミュレーション結果を再生できま"
+"す。"
+
+#: ../../howto-use-choreonoid.rst:242
+msgid "View mode and edit mode"
+msgstr "閲覧モードと編集モード"
+
+#: ../../howto-use-choreonoid.rst:244
+msgid ""
+"In the scene view, we usually control the 3D graphics of the simulation "
+"world using view mode. But by switching to edit mode, we can control the "
+"objects in the simulation world."
+msgstr ""
+"シーンビューでは、通常は閲覧モードでシミュレーション世界の3Dグラフィックス表"
+"示を操ることができますが、編集モードに切り替えてシミュレーション世界の物体を"
+"操作することができます。"
+
+#: ../../howto-use-choreonoid.rst:247
+msgid ""
+"Mode can be switched by pressing ESC key or by double click the background "
+"of the scene view."
+msgstr "ESCキー or 背景をダブルクリックでモードを切り替えることができます。"
+
+#: ../../howto-use-choreonoid.rst:249
+msgid "Shape of mouse cursor is changed to hand shape when in edit mode."
+msgstr "エディットモードのときはマウスカーソルが手のアイコンになります"
+
+#: ../../howto-use-choreonoid.rst:251
+msgid ""
+"We recommend to use scene view in view mode in normal operation to avoid "
+"accidental editing of object."
+msgstr ""
+"視点を操作するつもりが物体を操作してしまうことを防ぐため、通常は閲覧モードに"
+"しておきます"
+
+#: ../../howto-use-choreonoid.rst:253
+msgid "In edit mode, you can pull to move the objects in following situations."
+msgstr "編集モードの時は物体を引っ張ったりできる"
+
+#: ../../howto-use-choreonoid.rst:255
+msgid "Set initial pose of the object (before the simulation)."
+msgstr "初期状態の設定（シミュレーション前）"
+
+#: ../../howto-use-choreonoid.rst:257
+msgid "Give external force to the robot (during the simulation)."
+msgstr "ロボットに外力を加える（シミュレーション中）"
+
+#: ../../howto-use-choreonoid.rst:261
+msgid "Generate movie of simulation result"
+msgstr "シミュレーション結果の動画作成方法"
+
+#: ../../howto-use-choreonoid.rst:263
+msgid ""
+"Once apply the simulation and make motion playable using the play button on "
+"the time bar."
+msgstr ""
+"動画にしたい動きをタイムバーの再生ボタンで再生できる状態にしておきます。"
+
+#: ../../howto-use-choreonoid.rst:267
+msgid ""
+"Select [Tools]-[Movie Recorder] menu. \"Movie recorder\" dialog will be "
+"shown."
+msgstr ""
+"[ツール]-[Movie Generator]を実行します。すると「動画用連番ファイルの作成」ダ"
+"イアログが表示されます。"
+
+#: ../../howto-use-choreonoid.rst:271
+msgid "Set following parameters."
+msgstr "各種パラメータを設定します。"
+
+#: ../../howto-use-choreonoid.rst:273
+msgid "Select target view to record."
+msgstr "対象とする「シーン」ビューをクリックして「対象ビュー」を設定"
+
+#: ../../howto-use-choreonoid.rst:275
+msgid "Select recording mode to offline."
+msgstr "「録画モード」を「オフライン」に設定"
+
+#: ../../howto-use-choreonoid.rst:277
+msgid "Enter directory you want to output the serial capture image file."
+msgstr "「ディレクトリ」で連番画像ファイルを出力するディレクトリを設定"
+
+#: ../../howto-use-choreonoid.rst:279
+msgid "Enter base file name to save serial capture image file."
+msgstr "「ベースファイル名」に連番画像ファイルのベースとなる名前を設定"
+
+#: ../../howto-use-choreonoid.rst:281
+msgid "Set \"Start time\" and \"Finish time\"."
+msgstr "「開始時刻」、「終了時刻」を設定"
+
+#: ../../howto-use-choreonoid.rst:283
+msgid "Set frame rate."
+msgstr "「FPS」にフレームレートを設定"
+
+#: ../../howto-use-choreonoid.rst:285
+msgid ""
+"Image size can be specified by checking \"image size\". This function will "
+"crop the captured image to specified size. Thus, the original size of view "
+"has to be larger than the specified size. Please adjust the view size to be "
+"larger than the specified size before beginning the recording."
+msgstr ""
+"「画像サイズ」にチェックを入れると、画像サイズを指定できます。これについて"
+"は、単に対象のビューの描画領域のサイズを一時的にそのサイズにするだけの機能で"
+"す。このため注意として、もとのビューの大きさがここで指定する大きさ以上である"
+"必要があります。少し大きめにビューのサイズを変更してから実行するとよいかと思"
+"います。"
+
+#: ../../howto-use-choreonoid.rst:289
+msgid ""
+"The section 5 in generate of the movie in format of yuv420p. This format is "
+"need specify even pixel size. If specify odd pixel size, fail to generate of "
+"the movie file."
+msgstr ""
+"手順 5 での動画の生成では動画形式に yuv420p を指定しています。この動画形式は"
+"画像サイズに偶数ピクセルを指定する必要があります。画像サイズに奇数ピクセルを"
+"指定した場合、手順 5 での動画の生成に失敗します。"
+
+#: ../../howto-use-choreonoid.rst:293
+msgid ""
+"Press \"Record\" button to output the serial capture image files. Serial "
+"capture image files are generated in specified directory as follows."
+msgstr ""
+"「生成」ボタンを押して連番画像ファイルを出力します。指定したディレクトリに次"
+"のような連番画像ファイルが作成されます。"
+
+#: ../../howto-use-choreonoid.rst:298
+msgid ""
+"Enter following command to generate movie from the serial capture image "
+"files."
+msgstr "連番画像ファイルから動画を生成するコマンドを使用して動画を生成します。"
+
+#: ../../howto-use-choreonoid.rst:306
+msgid "If avconv command not found, run the follow commnad."
+msgstr "avconv コマンドが存在しない場合、以下のコマンドを実行します。"
+
+#: ../../howto-use-choreonoid.rst:5
+msgid ""
+"In this chapter, we will learn basic usage of Choreonoid using sample "
+"project."
+msgstr ""
+"この章ではサンプルプロジェクトを用いて、Choreonoidの基本的な操作方法について"
+"解説します。"
+
+#~ msgid ""
+#~ "In this section, we will learn basic usage of Choreonoid using sample "
+#~ "project."
+#~ msgstr ""
+#~ "この節ではサンプルプロジェクトを用いて、Choreonoidの基本的な操作方法につい"
+#~ "て解説します。"
