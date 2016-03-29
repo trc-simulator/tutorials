@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: trc-simulator 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-28 10:58+0900\n"
-"PO-Revision-Date: 2016-03-29 10:38+0900\n"
+"PO-Revision-Date: 2016-03-29 14:00+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -86,7 +86,7 @@ msgstr ""
 
 #: ../../howto-create-project.rst:53
 msgid "Specify initial state of simulation"
-msgstr "コントローラの選択"
+msgstr "初期条件の設定"
 
 #: ../../howto-create-project.rst:55
 msgid ""
