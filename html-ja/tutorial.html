@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Choreonoid ROS プラグインチュートリアル &mdash; trc-simulator 1.1.0 ドキュメント</title>
+  <title>Choreonoid ROS プラグインチュートリアル &mdash; trc-simulator 1.1.1 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="trc-simulator 1.1.0 ドキュメント" href="index.html"/>
+    <link rel="top" title="trc-simulator 1.1.1 ドキュメント" href="index.html"/>
         <link rel="next" title="リンク" href="links.html"/>
         <link rel="prev" title="シミュレーションプロジェクトの作成" href="howto-create-project.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.1.0
+                1.1.1
               </div>
             
           
@@ -311,26 +311,22 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
 <ol class="arabic simple">
 <li><p class="first">Worldアイテムを作成し、モデルデータを開くことでBodyアイテムも作成します。</p>
 </li>
-<li><p class="first">AISTSimulatorアイテムを作成し、順動力学モードもしくは、ハイゲインモードに設定します。</p>
+<li><p class="first">AISTSimulatorアイテムを作成し、順動力学モードに設定します。</p>
 </li>
 </ol>
 <img alt="_images/forward-dynamics-mode.png" src="_images/forward-dynamics-mode.png" />
-<p>もしくは</p>
-<img alt="_images/highgain-dynamics-mode.png" src="_images/highgain-dynamics-mode.png" />
 <ol class="arabic simple" start="3">
 <li><p class="first">（任意）画像入力が必要な場合はViewSimulatorアイテムをAISTSimulatorアイテムの下に作成します。</p>
 </li>
 <li><p class="first">操作するBody アイテムの下に、BodyRosアイテムを作成します。</p>
 </li>
-<li><p class="first">操作するBodyアイテムの下に、BodyRosTorqueController アイテム (順動力学モードの場合) もしくは、BodyRosHighgainController アイテム (ハイゲインモードの場合) を作成します。</p>
+<li><p class="first">操作するBodyアイテムの下に、BodyRosTorqueController アイテムを作成します。</p>
 </li>
 <li><p class="first">Worldアイテムの下にWorldRosアイテムを作成します。</p>
 </li>
 </ol>
 <p>上記の設定を行うと、アイテムビューは以下のような構造になります。</p>
 <img alt="_images/itemview-forward.png" src="_images/itemview-forward.png" />
-<p>もしくは</p>
-<img alt="_images/itemview-highgain.png" src="_images/itemview-highgain.png" />
 <p>最後に「シミュレーション開始」ボタンを押すとROS接続機能が有効になります。</p>
 </div>
 </div>
@@ -376,7 +372,7 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1.0',
+            VERSION:'1.1.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

@@ -97,26 +97,18 @@ Or you can prepare project of your own.
 To prepare your own project:
 
 1. Create World item and create Body item by opening the robot model data.
-2. Configure AISTSimulator item to use Foward dynamics mode or High-gain dynamics mode.
+2. Configure AISTSimulator item to use Foward dynamics mode.
 
 .. image:: images/forward-dynamics-mode.png
 
-Or
-
-.. image:: images/highgain-dynamics-mode.png
-
 3. (Optional) Create and place ViewSimulator item under the AISTSimulator you want to get image input.
 4. Create and place BodyRos item under the robot you want to control.
-5. Create and place BodyRosTorqueController item (in the case of Foward dynamics mode) or BodyRosHighgainController item (in the case of High-gain dynamics mode) under the robot you want to control.
+5. Create and place BodyRosTorqueController item under the robot you want to control.
 6. Create and place WorldRos item under the world you want to control.
 
 Item view should be structured as follows after the above configuration.
 
 .. image:: images/itemview-forward.png
-
-Or
-
-.. image:: images/itemview-highgain.png
 
 Finally, click "start simulation" button to enable the ROS functions.
 
