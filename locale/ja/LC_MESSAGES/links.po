@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: trc-simulator 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-28 11:17+0900\n"
-"PO-Revision-Date: 2016-03-28 14:06+0900\n"
+"PO-Revision-Date: 2016-03-29 11:36+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,64 +18,139 @@ msgstr "リンク"
 
 #: ../../links.rst:5
 msgid "Choreonoid"
-msgstr ""
+msgstr "Choreonoid"
 
-#: ../../links.rst:6
-msgid "Homepage"
-msgstr "ホームページ"
-
-#: ../../links.rst:8
-msgid "http://www.choreonoid.org"
-msgstr ""
-
-#: ../../links.rst:10 ../../links.rst:25
-msgid "Manual"
-msgstr "マニュアル"
-
-#: ../../links.rst:12
-msgid "http://www.choreonoid.org/en/manuals/1.5/index.html"
-msgstr "http://www.choreonoid.org/ja/manuals/1.5/index.html"
-
-#: ../../links.rst:14 ../../links.rst:22
-msgid "Source"
-msgstr "ソース"
-
-#: ../../links.rst:16
-msgid "http://github.com/s-nakaoka/choreonoid"
-msgstr ""
-
-#: ../../links.rst:19
+#: ../../links.rst:21
 msgid "Choreonoid plugin"
 msgstr "Choreonoid プラグイン"
 
-#: ../../links.rst:20
-msgid "Model editor"
-msgstr "モデル編集プラグイン"
-
-#: ../../links.rst:24
-msgid "http://github.com/fkanehiro/choreonoid-editor"
-msgstr "http://github.com/fkanehiro/choreonoid-editor"
-
-#: ../../links.rst:27
-msgid "http://fkanehiro.github.com/choreonoid-editor-doc/html/index.html"
-msgstr "http://fkanehiro.github.com/choreonoid-editor-doc/html-ja/index.html"
-
-#: ../../links.rst:30
+#: ../../links.rst:52
 msgid "Other software"
 msgstr "その他のソフトウェア"
 
-#: ../../links.rst:35
+#: ../../links.rst:60
 msgid "Simulation model file convertor \"simtrans\""
 msgstr "シミュレーションモデルのファイル形式変換ツール \"simtrans\""
 
-#: ../../links.rst:37
+#: ../../links.rst:54
+msgid "Robot Kinetics library (RoKi)"
+msgstr "RoKi シミュレータ"
+
+#: ../../links.rst:70
+msgid "Robot Operating System (ROS)"
+msgstr "Robot Operating System (ROS)"
+
+#: ../../links.rst:7 ../../links.rst:56 ../../links.rst:72 ../../links.rst:82
+msgid "Homepage"
+msgstr "ホームページ"
+
+#: ../../links.rst:9
+msgid "http://www.choreonoid.org"
+msgstr "http://www.choreonoid.org/ja"
+
+#: ../../links.rst:11 ../../links.rst:29 ../../links.rst:46 ../../links.rst:66
+msgid "Manual"
+msgstr "マニュアル"
+
+#: ../../links.rst:13
+msgid "http://www.choreonoid.org/en/manuals/1.5/index.html"
+msgstr "http://www.choreonoid.org/ja/manuals/1.5/index.html"
+
+#: ../../links.rst:15 ../../links.rst:25 ../../links.rst:35 ../../links.rst:41
+#: ../../links.rst:62
+msgid "Source"
+msgstr "ソース"
+
+#: ../../links.rst:17
+msgid "http://github.com/s-nakaoka/choreonoid"
+msgstr "http://github.com/s-nakaoka/choreonoid"
+
+#: ../../links.rst:43
+msgid "http://github.com/fkanehiro/choreonoid-editor"
+msgstr "http://github.com/fkanehiro/choreonoid-editor"
+
+#: ../../links.rst:48
+msgid "http://fkanehiro.github.com/choreonoid-editor-doc/html/index.html"
+msgstr "http://fkanehiro.github.com/choreonoid-editor-doc/html-ja/index.html"
+
+#: ../../links.rst:68
 msgid "http://fkanehiro.github.com/simtrans/html/index.html"
 msgstr "http://fkanehiro.github.com/simtrans/html-ja/index.html"
 
-#: ../../links.rst:33
+#: ../../links.rst:58
 msgid "http://www.mi.ams.eng.osaka-u.ac.jp/software/roki.html"
-msgstr ""
+msgstr "http://www.mi.ams.eng.osaka-u.ac.jp/software/roki.html"
+
+#: ../../links.rst:27
+msgid "https://github.com/fkanehiro/choreonoid_ros_pkg"
+msgstr "https://github.com/fkanehiro/choreonoid_ros_pkg"
 
 #: ../../links.rst:31
-msgid "Robot Kinetics library (RoKi)"
-msgstr "RoKi シミュレータ"
+msgid "http://fkanehiro.github.io/choreonoid_ros_pkg_doc/html/index.html"
+msgstr "http://fkanehiro.github.com/choreonoid_ros_pkg_doc/html-ja/index.html"
+
+#: ../../links.rst:37
+msgid "https://github.com/fkanehiro/choreonoid-sdfloader-plugin"
+msgstr "https://github.com/fkanehiro/choreonoid-sdfloader-plugin"
+
+#: ../../links.rst:74
+msgid "http://www.ros.org/"
+msgstr "http://www.ros.org/"
+
+#: ../../links.rst:64
+msgid "https://github.com/fkanehiro/simtrans"
+msgstr "https://github.com/fkanehiro/simtrans"
+
+#: ../../links.rst:76
+msgid "Documentation"
+msgstr "各種文書"
+
+#: ../../links.rst:78
+msgid "http://wiki.ros.org/"
+msgstr "http://wiki.ros.org/ja"
+
+#: ../../links.rst:23
+msgid "ROS plugin"
+msgstr "ROS プラグイン"
+
+#: ../../links.rst:33
+msgid "SDFLoader plugin"
+msgstr "SDFLoader プラグイン"
+
+#: ../../links.rst:39
+msgid "Model editor plugin"
+msgstr "モデル編集プラグイン"
+
+#: ../../links.rst:80
+msgid "SDFormat (SDF)"
+msgstr ""
+
+#: ../../links.rst:84
+msgid "http://sdformat.org/"
+msgstr ""
+
+#~ msgid "Model editor"
+#~ msgstr "モデル編集プラグイン"
+
+#~ msgid "Manual http://www.choreonoid.org/en/manuals/1.5/index.html"
+#~ msgstr "http://www.choreonoid.org/ja/manuals/1.5/index.html"
+
+#~ msgid "Source https://github.com/fkanehiro/choreonoid_ros_pkg"
+#~ msgstr "http://github.com/fkanehiro/choreonoid-editor"
+
+#~ msgid ""
+#~ "Manual http://fkanehiro.github.io/choreonoid_ros_pkg_doc/html/index.html"
+#~ msgstr "http://fkanehiro.github.com/choreonoid-editor-doc/html-ja/index.html"
+
+#~ msgid "Source https://github.com/fkanehiro/choreonoid-sdfloader-plugin"
+#~ msgstr "http://github.com/fkanehiro/choreonoid-editor"
+
+#~ msgid "Source http://github.com/fkanehiro/choreonoid-editor"
+#~ msgstr "http://github.com/fkanehiro/choreonoid-editor"
+
+#~ msgid ""
+#~ "Manual http://fkanehiro.github.com/choreonoid-editor-doc/html/index.html"
+#~ msgstr "http://fkanehiro.github.com/choreonoid-editor-doc/html-ja/index.html"
+
+#~ msgid "Manual http://fkanehiro.github.com/simtrans/html/index.html"
+#~ msgstr "http://fkanehiro.github.com/simtrans/html-ja/index.html"

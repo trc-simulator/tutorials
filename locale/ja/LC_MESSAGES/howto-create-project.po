@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: trc-simulator 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-28 10:58+0900\n"
-"PO-Revision-Date: 2016-03-28 13:36+0900\n"
+"PO-Revision-Date: 2016-03-29 10:38+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,29 +12,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../../howto-exec-simulation.rst:2
+#: ../../howto-create-project.rst:2
 msgid "Creating a simulation project"
-msgstr "シミュレーションの実行"
+msgstr "シミュレーションプロジェクトの作成"
 
-#: ../../howto-exec-simulation.rst:8
+#: ../../howto-create-project.rst:8
 msgid "Launch Choreonoid"
 msgstr "Choreonoidの実行"
 
-#: ../../howto-exec-simulation.rst:10
+#: ../../howto-create-project.rst:10
 msgid ""
 "Let's launch Choreonoid first. Type the following command in gnome-terminal."
 msgstr ""
 "まずはChoreonoidを実行します。端末を開いて以下のコマンドを実行してください。"
 
-#: ../../howto-exec-simulation.rst:16
+#: ../../howto-create-project.rst:16
 msgid "You will see a window as follows."
 msgstr "以下のような画面が表示されます。"
 
-#: ../../howto-exec-simulation.rst:21
+#: ../../howto-create-project.rst:21
 msgid "Open a model file"
 msgstr "モデルを開く"
 
-#: ../../howto-exec-simulation.rst:23
+#: ../../howto-create-project.rst:23
 msgid ""
 "Create a world item named \"World\" first by selecting \"File\", \"New...\" "
 "and \"World\" menus."
@@ -42,7 +42,7 @@ msgstr ""
 "まず、[メニュー]-[ファイル]-[新規]-[ワールド]を選択し、ワールドアイテム"
 "「World」を追加します。"
 
-#: ../../howto-exec-simulation.rst:29
+#: ../../howto-create-project.rst:29
 msgid ""
 "Make sure the model file is located under lower level of the \"World\" item. "
 "Parent and child relationships of items have measure importance to define "
@@ -54,7 +54,7 @@ msgstr ""
 "さい。位置が異なる場合は、アイテムビュー内のアイテムをドラッグして移動するこ"
 "とが可能です。"
 
-#: ../../howto-exec-simulation.rst:33
+#: ../../howto-create-project.rst:33
 msgid ""
 "When you check the checkbox named \"JVRC\", JVRC-1 will be displayed in the "
 "scene view as follows."
@@ -63,19 +63,19 @@ msgstr ""
 "ストのJVRC-1にチェックを入れてください。 すると、以下のようにロボットが表示さ"
 "れます。"
 
-#: ../../howto-exec-simulation.rst:38
+#: ../../howto-create-project.rst:38
 msgid "Add a model of the floor"
 msgstr "床を追加する"
 
-#: ../../howto-exec-simulation.rst:40
+#: ../../howto-create-project.rst:40
 msgid "To prevent the robot from falling, let's add a model of the ground."
 msgstr "シミュレーションを行うために、床(地面)を追加します。"
 
-#: ../../howto-exec-simulation.rst:45
+#: ../../howto-create-project.rst:45
 msgid "Add a simulator item"
 msgstr "シミュレータアイテムを追加する"
 
-#: ../../howto-exec-simulation.rst:47
+#: ../../howto-create-project.rst:47
 msgid ""
 "Choose \"World\" item in the item view. Then create a \"AISTSimulator\" item "
 "by following \"File\", \"New...\" menus."
@@ -84,11 +84,11 @@ msgstr ""
 "り「AISTシミュレータ」を選択し、AISTシミュレータ「AISTSimulator」を追加しま"
 "す。"
 
-#: ../../howto-exec-simulation.rst:53
+#: ../../howto-create-project.rst:53
 msgid "Specify initial state of simulation"
 msgstr "コントローラの選択"
 
-#: ../../howto-exec-simulation.rst:55
+#: ../../howto-create-project.rst:55
 msgid ""
 "By set the initial position and attitude of the robot to the project file, "
 "we can start the simulation in specified state even after we restart the "
@@ -99,18 +99,18 @@ msgstr ""
 "シミュレーションを開始することが可能です。初期状態の設定は以下の手順で行いま"
 "す。"
 
-#: ../../howto-exec-simulation.rst:58
+#: ../../howto-create-project.rst:58
 msgid ""
 "Position and attitude of the root link of the robot can be edited in Body/"
 "Link view."
 msgstr ""
 "ボディ／リンクビューでルートリンクの位置・姿勢を編集することができます。"
 
-#: ../../howto-exec-simulation.rst:62
+#: ../../howto-create-project.rst:62
 msgid "Joint angles can be edited in Joint slider view."
 msgstr "関節スライダビューで関節の角度を編集することができます。"
 
-#: ../../howto-exec-simulation.rst:69
+#: ../../howto-create-project.rst:69
 msgid ""
 "Finally, press the \"Store body setting to the initial world state\" button "
 "on the simulation bar,"
@@ -118,12 +118,12 @@ msgstr ""
 "最後にシミュレーションバーの「現在の状態をワールド初期状態に設定」ボタンを押"
 "して初期状態を設定し、"
 
-#: ../../howto-exec-simulation.rst:73
+#: ../../howto-create-project.rst:73
 msgid ""
 "And don't forget to press the \"Save the project\" button on the file bar."
 msgstr "ファイルバーの「プロジェクトを保存」するのを忘れないでください。"
 
-#: ../../howto-exec-simulation.rst:79
+#: ../../howto-create-project.rst:79
 msgid ""
 "Basic simulation settings (time step, simulation time, integration mode, "
 "friction)"
@@ -131,11 +131,11 @@ msgstr ""
 "シミュレーションの基本設定（時間刻み、シミュレーション時間、積分モード、摩擦"
 "係数）"
 
-#: ../../howto-exec-simulation.rst:82
+#: ../../howto-create-project.rst:82
 msgid "Time step"
 msgstr "時間刻み"
 
-#: ../../howto-exec-simulation.rst:84
+#: ../../howto-create-project.rst:84
 msgid ""
 "For time step, 1[ms] is recommended. Time step is trade off to computational "
 "cost and preciseness of the simulation. We also have to define this value "
@@ -144,46 +144,46 @@ msgstr ""
 "1[ms] を推奨します。時間刻みは計算速度とシミュレーション精度のトレードオフで"
 "あり、コントローラの実行周期との兼ね合いも考慮して設定します。"
 
-#: ../../howto-exec-simulation.rst:88
+#: ../../howto-create-project.rst:88
 msgid "Press the setting button on the time bar."
 msgstr "タイムバーの設定ダイアログをボタンをクリックします。"
 
-#: ../../howto-exec-simulation.rst:92
+#: ../../howto-create-project.rst:92
 msgid "Set internal frame rate to \"1000\"(=1ms) in the setting dialog."
 msgstr ""
 "タイムバーの設定で、内部フレームレートの値を「1000」(1ms)に設定します。"
 
-#: ../../howto-exec-simulation.rst:97
+#: ../../howto-create-project.rst:97
 msgid "Simulation time"
 msgstr "シミュレーション時間"
 
-#: ../../howto-exec-simulation.rst:99
+#: ../../howto-create-project.rst:99
 msgid "Unlimited"
 msgstr "無制限"
 
-#: ../../howto-exec-simulation.rst:101 ../../howto-exec-simulation.rst:109
+#: ../../howto-create-project.rst:101 ../../howto-create-project.rst:109
 msgid "Select \"AISTSimulator\" item in the item view."
 msgstr "アイテムビュー上で \"AISTSimulator\" アイテムを選択状態にします。"
 
-#: ../../howto-exec-simulation.rst:103 ../../howto-exec-simulation.rst:111
+#: ../../howto-create-project.rst:103 ../../howto-create-project.rst:111
 msgid ""
 "Double click on the \"time range\" property on the property view to change "
 "the setting."
 msgstr "プロパティビューの時間範囲の値をダブルクリックして変更します。"
 
-#: ../../howto-exec-simulation.rst:107
+#: ../../howto-create-project.rst:107
 msgid "Within time bar range"
 msgstr "タイムバー範囲"
 
-#: ../../howto-exec-simulation.rst:115
+#: ../../howto-create-project.rst:115
 msgid "Configure the start time and end time on the time bar."
 msgstr "タイムバーの開始時間と終了時間を設定します。"
 
-#: ../../howto-exec-simulation.rst:122
+#: ../../howto-create-project.rst:122
 msgid "Integration mode"
 msgstr "積分モード"
 
-#: ../../howto-exec-simulation.rst:124
+#: ../../howto-create-project.rst:124
 msgid ""
 "You can select either Runge Kutta method or Euler method to solve the "
 "differential equation in physics simulation. Use of Runge Kutta method is "
@@ -195,7 +195,7 @@ msgstr ""
 "タ法を選択することを推奨します（オイラー法は理論上単項式しか精度よく計算でき"
 "ません）。"
 
-#: ../../howto-exec-simulation.rst:127
+#: ../../howto-create-project.rst:127
 msgid ""
 "To set the integration mode, click on the AISTSimulator item and change the "
 "parameter in the property view."
@@ -203,11 +203,11 @@ msgstr ""
 "積分モードを設定するには、AISTSimulatorアイテムを選択し、プロパティビュー上で"
 "パラメータを変更します。"
 
-#: ../../howto-exec-simulation.rst:133
+#: ../../howto-create-project.rst:133
 msgid "Friction"
 msgstr "摩擦係数"
 
-#: ../../howto-exec-simulation.rst:135
+#: ../../howto-create-project.rst:135
 msgid ""
 "For frictions between the contacted objects, we can set \"static friction\" "
 "and \"slip friction\" parameters. Static friction is applied when objects "
@@ -218,12 +218,12 @@ msgstr ""
 "きます。静止摩擦係数は相対的に動いていない2物体間に働く摩擦係数です。動摩擦係"
 "数は相対的に動いている物体間に働く摩擦係数です。"
 
-#: ../../howto-exec-simulation.rst:139
+#: ../../howto-create-project.rst:139
 msgid ""
 "All the objects in the world are applied with the same friction parameters."
 msgstr "摩擦係数は、同じ係数がワールド内にある全ての物体間に適用されます。"
 
-#: ../../howto-exec-simulation.rst:141
+#: ../../howto-create-project.rst:141
 msgid ""
 "To set the friction parameters, click on the AISTSimulator item and change "
 "the parameters in the property view."
@@ -231,18 +231,18 @@ msgstr ""
 "積分モードを設定するには、AISTSimulatorアイテムを選択し、プロパティビュー上で"
 "パラメータを変更します。"
 
-#: ../../howto-exec-simulation.rst:147
+#: ../../howto-create-project.rst:147
 msgid "Enable cameras and range sensors"
 msgstr "カメラ、距離センサの有効化"
 
-#: ../../howto-exec-simulation.rst:149
+#: ../../howto-create-project.rst:149
 msgid ""
 "To enable cameras and range sensors in simulation, do the following settings."
 msgstr ""
 "シミュレーションにおいてカメラや距離センサを有効にするため、以下の作業を行い"
 "ます。"
 
-#: ../../howto-exec-simulation.rst:151
+#: ../../howto-create-project.rst:151
 msgid ""
 "Select AISTSimulator in the item view and create a GLVisionSensorSimulator "
 "item and name it GLVisionSimulator."
@@ -250,7 +250,7 @@ msgstr ""
 "アイテムビューで「AISTSimulator」を選択し、「新規」より「GLビジョンシミュレー"
 "タ」を選択し、「GLVisionSimulator」という名前で追加します。"
 
-#: ../../howto-exec-simulation.rst:157
+#: ../../howto-create-project.rst:157
 msgid ""
 "If \"Target bodies\" and \"Target sensors\" properties are empty, all the "
 "sensors exist in the simulation world will be simulated. You can improve the "
@@ -265,11 +265,11 @@ msgstr ""
 "rangerのみをシミュレーション対象としているため、頭部のカメラはシミュレートさ"
 "れないことになります。"
 
-#: ../../howto-exec-simulation.rst:163
+#: ../../howto-create-project.rst:163
 msgid "Run simulation"
 msgstr "シミュレーションを実行する"
 
-#: ../../howto-exec-simulation.rst:165
+#: ../../howto-create-project.rst:165
 msgid ""
 "Next press \"Start simulation from the beginning\" button in the simulation "
 "tool bar. Simulation will start."
@@ -277,17 +277,17 @@ msgstr ""
 "次に、シミュレーションツールバーの「シミュレーション開始ボタン」を押します。 "
 "これにより、画面上でモデルのシミュレーションが開始されます。"
 
-#: ../../howto-exec-simulation.rst:169
+#: ../../howto-create-project.rst:169
 msgid "Just after starting simulation, the robot falls down."
 msgstr ""
 "シミュレーションを実行すると下の画像のようにロボットはすぐに崩れ落ちてしまい"
 "ます。"
 
-#: ../../howto-exec-simulation.rst:176
+#: ../../howto-create-project.rst:176
 msgid "Save a project"
 msgstr "プロジェクトの保存"
 
-#: ../../howto-exec-simulation.rst:178
+#: ../../howto-create-project.rst:178
 msgid ""
 "After running simulation, let's save the project. Choose \"Save Project As\" "
 "menu in \"File\" menu and name the project file."
@@ -296,12 +296,12 @@ msgstr ""
 "「ファイル」の「名前を付けてプロジェクトを保存」を選択し、適当なファイル名を"
 "付けて保存します。"
 
-#: ../../howto-exec-simulation.rst:5
+#: ../../howto-create-project.rst:5
 msgid "This chapter explains how to create and run a simple simulation."
 msgstr ""
 "この章ではシミュレーションプロジェクトを作成する方法について解説します。"
 
-#: ../../howto-exec-simulation.rst:25
+#: ../../howto-create-project.rst:25
 msgid ""
 "Then load a model file of JVRC-1 by choosing \"OpenHRP Model File\" followed "
 "by \"File\", \"Open...\" menus. The filename is ~/catkin_ws/install/share/"
@@ -311,7 +311,7 @@ msgstr ""
 "JVRC-1のモデルファイルを読み込みます。ファイル名は ~/catkin_ws/install/share/"
 "jvrc_models/model/JVRC-1/main.wrl です。"
 
-#: ../../howto-exec-simulation.rst:42
+#: ../../howto-create-project.rst:42
 msgid ""
 "The window of Choreonoid has a tab named \"Items\". This tab is called "
 "\"item view\". Select \"World\" item first in the item view. Then choose "
@@ -325,7 +325,7 @@ msgstr ""
 "イルを開きます。ファイル名は ~/catkin_ws/devel/share/choreonoid-1.5/model/"
 "misc/floor.wrl です。"
 
-#: ../../howto-exec-simulation.rst:66
+#: ../../howto-create-project.rst:66
 msgid ""
 "You can also edit the position and attitude visually using scene view. To do "
 "visual editing, please switch the scene view to edit mode."
@@ -333,7 +333,7 @@ msgstr ""
 "シーンビュー上でインタラクティブに編集、逆運動学を用いた編集も可能です。イン"
 "タラクティブ編集はシーンビューを編集モードに切り替えて行います。"
 
-#: ../../howto-exec-simulation.rst:173
+#: ../../howto-create-project.rst:173
 msgid "Because all joints are not controlled but free."
 msgstr "これは全く関節の制御をしていないためです。"
 

@@ -126,7 +126,7 @@ Install RoKi and required package, run the following command.
 
 .. code-block:: bash
 
-   $ sudo install roki roki-dev
+   $ sudo apt-get install roki roki-dev
 
 
 Install Choreonoid ROS Plugin

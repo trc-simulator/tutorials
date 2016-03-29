@@ -12,9 +12,8 @@ Contents:
    :maxdepth: 2
 
    install.rst
-   about-choreonoid.rst
-   howto-exec-simulation.rst
-   manual.rst
+   howto-use-choreonoid.rst
+   howto-create-project.rst
    tutorial.rst
    links.rst
 
