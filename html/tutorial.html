@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Choreonoid ROS Plugin Tutorial &mdash; trc-simulator 1.0.0 documentation</title>
+  <title>Choreonoid ROS Plugin Tutorial &mdash; trc-simulator 1.1.0 documentation</title>
   
 
   
@@ -30,9 +30,9 @@
   
 
   
-    <link rel="top" title="trc-simulator 1.0.0 documentation" href="index.html"/>
+    <link rel="top" title="trc-simulator 1.1.0 documentation" href="index.html"/>
         <link rel="next" title="Links" href="links.html"/>
-        <link rel="prev" title="Choreonoid ROS Plugin Manual" href="manual.html"/> 
+        <link rel="prev" title="Creating a simulation project" href="howto-create-project.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.0.0
+                1.1.0
               </div>
             
           
@@ -83,16 +83,14 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="about-choreonoid.html">About Choreonoid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-exec-simulation.html">Creating a simulation project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="manual.html">Choreonoid ROS Plugin Manual</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Choreonoid ROS Plugin Tutorial</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="howto-use-choreonoid.html">Basic usage of Choreonoid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-create-project.html">Creating a simulation project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Choreonoid ROS Plugin Tutorial</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#run-preconfigured-project">Run preconfigured project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configure-the-project-by-hand">Configure the project by hand</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#use-ros-utility-commands-to-monitor-the-message">Use ROS utility commands to monitor the message</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#use-ros-utility-commands-to-control-the-simulation">Use ROS utility commands to control the simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#use-python-script-to-send-command-to-the-robot">Use Python script to send command to the robot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#use-python-script-to-spawn-the-model">Use Python script to spawn the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-the-project-by-hand">Configure the project by hand</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="links.html">Links</a></li>
@@ -155,29 +153,6 @@
 <p class="first admonition-title">Note</p>
 <p class="last">Preconfigured project has been created in the Foward dynamics mode.</p>
 </div>
-</div>
-<div class="section" id="configure-the-project-by-hand">
-<h2>Configure the project by hand<a class="headerlink" href="#configure-the-project-by-hand" title="Permalink to this headline">¶</a></h2>
-<p>Or you can prepare project of your own.</p>
-<p>To prepare your own project:</p>
-<ol class="arabic simple">
-<li>Create World item and create Body item by opening the robot model data.</li>
-<li>Configure AISTSimulator item to use Foward dynamics mode or High-gain dynamics mode.</li>
-</ol>
-<img alt="_images/forward-dynamics-mode.png" src="_images/forward-dynamics-mode.png" />
-<p>Or</p>
-<img alt="_images/highgain-dynamics-mode.png" src="_images/highgain-dynamics-mode.png" />
-<ol class="arabic simple" start="3">
-<li>(Optional) Create and place ViewSimulator item under the AISTSimulator you want to get image input.</li>
-<li>Create and place BodyRos item under the robot you want to control.</li>
-<li>Create and place BodyRosTorqueController item (in the case of Foward dynamics mode) or BodyRosHighgainController item (in the case of High-gain dynamics mode) under the robot you want to control.</li>
-<li>Create and place WorldRos item under the world you want to control.</li>
-</ol>
-<p>Item view should be structured as follows after the above configuration.</p>
-<img alt="_images/itemview-forward.png" src="_images/itemview-forward.png" />
-<p>Or</p>
-<img alt="_images/itemview-highgain.png" src="_images/itemview-highgain.png" />
-<p>Finally, click &#8220;start simulation&#8221; button to enable the ROS functions.</p>
 </div>
 <div class="section" id="use-ros-utility-commands-to-monitor-the-message">
 <h2>Use ROS utility commands to monitor the message<a class="headerlink" href="#use-ros-utility-commands-to-monitor-the-message" title="Permalink to this headline">¶</a></h2>
@@ -326,60 +301,28 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
 </pre></div>
 </div>
 </div>
-<div class="section" id="use-python-script-to-spawn-the-model">
-<h2>Use Python script to spawn the model<a class="headerlink" href="#use-python-script-to-spawn-the-model" title="Permalink to this headline">¶</a></h2>
-<p>Following example (test-model-spawn.py) loads box model dynamically to current simulation.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
-
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">rospy</span>
-<span class="kn">from</span> <span class="nn">gazebo_msgs.srv</span> <span class="kn">import</span> <span class="n">SpawnModel</span>
-<span class="kn">from</span> <span class="nn">gazebo_msgs.srv</span> <span class="kn">import</span> <span class="n">DeleteModel</span>
-<span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="kn">import</span> <span class="n">Pose</span>
-
-<span class="n">ns</span> <span class="o">=</span> <span class="s1">&#39;/World/&#39;</span>
-
-<span class="k">def</span> <span class="nf">modelspawn</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">pose</span><span class="p">):</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-    <span class="n">model_xml</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;spawn_vrml_model&#39;</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">spawnsrv</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;spawn_vrml_model&#39;</span><span class="p">,</span> <span class="n">SpawnModel</span><span class="p">)</span>
-        <span class="n">spawnsrv</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">model_xml</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">pose</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceException</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s2">&quot;Service call failed </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">e</span>
-
-<span class="k">def</span> <span class="nf">modeldelete</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;delete_model&#39;</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">deletesrv</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;delete_model&#39;</span><span class="p">,</span> <span class="n">DeleteModel</span><span class="p">)</span>
-        <span class="n">deletesrv</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceException</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s2">&quot;Service call failed </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">e</span>
-
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s2">&quot;spawn model&quot;</span>
-    <span class="n">modelspawn</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="s2">&quot;/usr/share/OpenHRP-3.1/sample/model/box.wrl&quot;</span><span class="p">,</span> <span class="n">Pose</span><span class="p">())</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-    <span class="k">print</span> <span class="s2">&quot;delete model&quot;</span>
-    <span class="n">modeldelete</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>The script contains under directory of ~/catkin_ws/install/share/choreonoid_plugins/test.</p>
-<p>The script you can run in the following procedure.</p>
+<div class="section" id="configure-the-project-by-hand">
+<h2>Configure the project by hand<a class="headerlink" href="#configure-the-project-by-hand" title="Permalink to this headline">¶</a></h2>
+<p>Or you can prepare project of your own.</p>
+<p>To prepare your own project:</p>
 <ol class="arabic simple">
-<li>You can use preconfigured project prepared for this tutorial.</li>
+<li>Create World item and create Body item by opening the robot model data.</li>
+<li>Configure AISTSimulator item to use Foward dynamics mode or High-gain dynamics mode.</li>
 </ol>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ roslaunch choreonoid_ros jvrc-1-rviz.launch
-</pre></div>
-</div>
-<ol class="arabic simple" start="2">
-<li>Open a new terminal.</li>
-<li>Run the following command.</li>
+<img alt="_images/forward-dynamics-mode.png" src="_images/forward-dynamics-mode.png" />
+<p>Or</p>
+<img alt="_images/highgain-dynamics-mode.png" src="_images/highgain-dynamics-mode.png" />
+<ol class="arabic simple" start="3">
+<li>(Optional) Create and place ViewSimulator item under the AISTSimulator you want to get image input.</li>
+<li>Create and place BodyRos item under the robot you want to control.</li>
+<li>Create and place BodyRosTorqueController item (in the case of Foward dynamics mode) or BodyRosHighgainController item (in the case of High-gain dynamics mode) under the robot you want to control.</li>
+<li>Create and place WorldRos item under the world you want to control.</li>
 </ol>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ rosrun choreonoid_plugins test-model-spawn.py
-</pre></div>
-</div>
+<p>Item view should be structured as follows after the above configuration.</p>
+<img alt="_images/itemview-forward.png" src="_images/itemview-forward.png" />
+<p>Or</p>
+<img alt="_images/itemview-highgain.png" src="_images/itemview-highgain.png" />
+<p>Finally, click &#8220;start simulation&#8221; button to enable the ROS functions.</p>
 </div>
 </div>
 
@@ -393,7 +336,7 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
         <a href="links.html" class="btn btn-neutral float-right" title="Links" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="manual.html" class="btn btn-neutral" title="Choreonoid ROS Plugin Manual" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="howto-create-project.html" class="btn btn-neutral" title="Creating a simulation project" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -424,7 +367,7 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.0',
+            VERSION:'1.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

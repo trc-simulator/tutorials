@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Choreonoid ROS プラグインチュートリアル &mdash; trc-simulator 1.0.0 ドキュメント</title>
+  <title>Choreonoid ROS プラグインチュートリアル &mdash; trc-simulator 1.1.0 ドキュメント</title>
   
 
   
@@ -30,9 +30,9 @@
   
 
   
-    <link rel="top" title="trc-simulator 1.0.0 ドキュメント" href="index.html"/>
+    <link rel="top" title="trc-simulator 1.1.0 ドキュメント" href="index.html"/>
         <link rel="next" title="リンク" href="links.html"/>
-        <link rel="prev" title="Choreonoid ROSプラグインマニュアル" href="manual.html"/> 
+        <link rel="prev" title="シミュレーションプロジェクトの作成" href="howto-create-project.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.0.0
+                1.1.0
               </div>
             
           
@@ -83,16 +83,14 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">インストール</a></li>
-<li class="toctree-l1"><a class="reference internal" href="about-choreonoid.html">Choreonoidについて</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-exec-simulation.html">シミュレーションの実行</a></li>
-<li class="toctree-l1"><a class="reference internal" href="manual.html">Choreonoid ROSプラグインマニュアル</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Choreonoid ROS プラグインチュートリアル</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="howto-use-choreonoid.html">Choreonoidの基本操作</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-create-project.html">シミュレーションプロジェクトの作成</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Choreonoid ROS プラグインチュートリアル</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#run-preconfigured-project">設定済みのプロジェクトを開く</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configure-the-project-by-hand">カスタムプロジェクトの作成</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#use-ros-utility-commands-to-monitor-the-message">ROSユーティリティコマンドを使ってメッセージをモニタする</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#use-ros-utility-commands-to-control-the-simulation">ROSユーティリティコマンドを使ってシミュレーションを制御する</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#use-python-script-to-send-command-to-the-robot">Pythonスクリプトを利用してロボットを動かす</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#use-python-script-to-spawn-the-model">Pythonスクリプトを利用してモデルファイルをロードする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-the-project-by-hand">カスタムプロジェクトの作成</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="links.html">リンク</a></li>
@@ -155,35 +153,6 @@
 <p class="first admonition-title">注釈</p>
 <p class="last">設定済みのプロジェクトは、順動力学モードを使用する設定で作成しています。</p>
 </div>
-</div>
-<div class="section" id="configure-the-project-by-hand">
-<h2>カスタムプロジェクトの作成<a class="headerlink" href="#configure-the-project-by-hand" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>プロジェクトファイルは自身で作成する事も可能です。</p>
-<p>プロジェクトファイルは以下の手順で作成します:</p>
-<ol class="arabic simple">
-<li><p class="first">Worldアイテムを作成し、モデルデータを開くことでBodyアイテムも作成します。</p>
-</li>
-<li><p class="first">AISTSimulatorアイテムを作成し、順動力学モードもしくは、ハイゲインモードに設定します。</p>
-</li>
-</ol>
-<img alt="_images/forward-dynamics-mode.png" src="_images/forward-dynamics-mode.png" />
-<p>もしくは</p>
-<img alt="_images/highgain-dynamics-mode.png" src="_images/highgain-dynamics-mode.png" />
-<ol class="arabic simple" start="3">
-<li><p class="first">（任意）画像入力が必要な場合はViewSimulatorアイテムをAISTSimulatorアイテムの下に作成します。</p>
-</li>
-<li><p class="first">操作するBody アイテムの下に、BodyRosアイテムを作成します。</p>
-</li>
-<li><p class="first">操作するBodyアイテムの下に、BodyRosTorqueController アイテム (順動力学モードの場合) もしくは、BodyRosHighgainController アイテム (ハイゲインモードの場合) を作成します。</p>
-</li>
-<li><p class="first">Worldアイテムの下にWorldRosアイテムを作成します。</p>
-</li>
-</ol>
-<p>上記の設定を行うと、アイテムビューは以下のような構造になります。</p>
-<img alt="_images/itemview-forward.png" src="_images/itemview-forward.png" />
-<p>もしくは</p>
-<img alt="_images/itemview-highgain.png" src="_images/itemview-highgain.png" />
-<p>最後に「シミュレーション開始」ボタンを押すとROS接続機能が有効になります。</p>
 </div>
 <div class="section" id="use-ros-utility-commands-to-monitor-the-message">
 <h2>ROSユーティリティコマンドを使ってメッセージをモニタする<a class="headerlink" href="#use-ros-utility-commands-to-monitor-the-message" title="このヘッドラインへのパーマリンク">¶</a></h2>
@@ -335,63 +304,34 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
 </pre></div>
 </div>
 </div>
-<div class="section" id="use-python-script-to-spawn-the-model">
-<h2>Pythonスクリプトを利用してモデルファイルをロードする<a class="headerlink" href="#use-python-script-to-spawn-the-model" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>以下の例 (test-model-spawn.py) は、現在のシミュレーション上にboxモデルを動的にロードします。</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
-
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">rospy</span>
-<span class="kn">from</span> <span class="nn">gazebo_msgs.srv</span> <span class="kn">import</span> <span class="n">SpawnModel</span>
-<span class="kn">from</span> <span class="nn">gazebo_msgs.srv</span> <span class="kn">import</span> <span class="n">DeleteModel</span>
-<span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="kn">import</span> <span class="n">Pose</span>
-
-<span class="n">ns</span> <span class="o">=</span> <span class="s1">&#39;/World/&#39;</span>
-
-<span class="k">def</span> <span class="nf">modelspawn</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">pose</span><span class="p">):</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-    <span class="n">model_xml</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;spawn_vrml_model&#39;</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">spawnsrv</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;spawn_vrml_model&#39;</span><span class="p">,</span> <span class="n">SpawnModel</span><span class="p">)</span>
-        <span class="n">spawnsrv</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">model_xml</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">pose</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceException</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s2">&quot;Service call failed </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">e</span>
-
-<span class="k">def</span> <span class="nf">modeldelete</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;delete_model&#39;</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">deletesrv</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span><span class="n">ns</span> <span class="o">+</span> <span class="s1">&#39;delete_model&#39;</span><span class="p">,</span> <span class="n">DeleteModel</span><span class="p">)</span>
-        <span class="n">deletesrv</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceException</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s2">&quot;Service call failed </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">e</span>
-
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s2">&quot;spawn model&quot;</span>
-    <span class="n">modelspawn</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="s2">&quot;/usr/share/OpenHRP-3.1/sample/model/box.wrl&quot;</span><span class="p">,</span> <span class="n">Pose</span><span class="p">())</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-    <span class="k">print</span> <span class="s2">&quot;delete model&quot;</span>
-    <span class="n">modeldelete</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>このスクリプトは ~/catkin_ws/install/share/choreonoid_plugins/test 以下に収めています。</p>
-<p>スクリプトは以下の手順で実行します。</p>
+<div class="section" id="configure-the-project-by-hand">
+<h2>カスタムプロジェクトの作成<a class="headerlink" href="#configure-the-project-by-hand" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>プロジェクトファイルは自身で作成する事も可能です。</p>
+<p>プロジェクトファイルは以下の手順で作成します:</p>
 <ol class="arabic simple">
-<li><p class="first">このチュートリアル用に準備されたプロジェクトファイルを開きます。</p>
+<li><p class="first">Worldアイテムを作成し、モデルデータを開くことでBodyアイテムも作成します。</p>
+</li>
+<li><p class="first">AISTSimulatorアイテムを作成し、順動力学モードもしくは、ハイゲインモードに設定します。</p>
 </li>
 </ol>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ roslaunch choreonoid_ros jvrc-1-rviz.launch
-</pre></div>
-</div>
-<ol class="arabic simple" start="2">
-<li><p class="first">新しい端末を起動します。</p>
+<img alt="_images/forward-dynamics-mode.png" src="_images/forward-dynamics-mode.png" />
+<p>もしくは</p>
+<img alt="_images/highgain-dynamics-mode.png" src="_images/highgain-dynamics-mode.png" />
+<ol class="arabic simple" start="3">
+<li><p class="first">（任意）画像入力が必要な場合はViewSimulatorアイテムをAISTSimulatorアイテムの下に作成します。</p>
 </li>
-<li><p class="first">以下のコマンドを実行します。</p>
+<li><p class="first">操作するBody アイテムの下に、BodyRosアイテムを作成します。</p>
+</li>
+<li><p class="first">操作するBodyアイテムの下に、BodyRosTorqueController アイテム (順動力学モードの場合) もしくは、BodyRosHighgainController アイテム (ハイゲインモードの場合) を作成します。</p>
+</li>
+<li><p class="first">Worldアイテムの下にWorldRosアイテムを作成します。</p>
 </li>
 </ol>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ rosrun choreonoid_plugins test-model-spawn.py
-</pre></div>
-</div>
+<p>上記の設定を行うと、アイテムビューは以下のような構造になります。</p>
+<img alt="_images/itemview-forward.png" src="_images/itemview-forward.png" />
+<p>もしくは</p>
+<img alt="_images/itemview-highgain.png" src="_images/itemview-highgain.png" />
+<p>最後に「シミュレーション開始」ボタンを押すとROS接続機能が有効になります。</p>
 </div>
 </div>
 
@@ -405,7 +345,7 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
         <a href="links.html" class="btn btn-neutral float-right" title="リンク" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="manual.html" class="btn btn-neutral" title="Choreonoid ROSプラグインマニュアル" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="howto-create-project.html" class="btn btn-neutral" title="シミュレーションプロジェクトの作成" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -436,7 +376,7 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.0',
+            VERSION:'1.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>シミュレーションプロジェクトの作成 &mdash; trc-simulator 1.1.0 ドキュメント</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="trc-simulator 1.1.0 ドキュメント" href="index.html"/>
+        <link rel="next" title="Choreonoid ROS プラグインチュートリアル" href="tutorial.html"/>
+        <link rel="prev" title="Choreonoidの基本操作" href="howto-use-choreonoid.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trc-simulator
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">インストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-use-choreonoid.html">Choreonoidの基本操作</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">シミュレーションプロジェクトの作成</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#launch-choreonoid">Choreonoidの実行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#open-a-model-file">モデルを開く</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-a-model-of-the-floor">床を追加する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-a-simulator-item">シミュレータアイテムを追加する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#specify-initial-state-of-simulation">コントローラの選択</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-simulation-settings-time-step-simulation-time-integration-mode-friction">シミュレーションの基本設定（時間刻み、シミュレーション時間、積分モード、摩擦係数）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#time-step">時間刻み</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulation-time">シミュレーション時間</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integration-mode">積分モード</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#friction">摩擦係数</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#enable-cameras-and-range-sensors">カメラ、距離センサの有効化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-simulation">シミュレーションを実行する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#save-a-project">プロジェクトの保存</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Choreonoid ROS プラグインチュートリアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">リンク</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">trc-simulator</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>シミュレーションプロジェクトの作成</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/howto-create-project.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-a-simulation-project">
+<h1>シミュレーションプロジェクトの作成<a class="headerlink" href="#creating-a-simulation-project" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>この章ではシミュレーションプロジェクトを作成する方法について解説します。</p>
+<div class="section" id="launch-choreonoid">
+<h2>Choreonoidの実行<a class="headerlink" href="#launch-choreonoid" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まずはChoreonoidを実行します。端末を開いて以下のコマンドを実行してください。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ choreonoid
+</pre></div>
+</div>
+<p>以下のような画面が表示されます。</p>
+<img alt="_images/choreonoid.png" src="_images/choreonoid.png" />
+</div>
+<div class="section" id="open-a-model-file">
+<h2>モデルを開く<a class="headerlink" href="#open-a-model-file" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まず、[メニュー]-[ファイル]-[新規]-[ワールド]を選択し、ワールドアイテム「World」を追加します。</p>
+<p>そのまま[メニュー]-[ファイル]-[読み込み]-[OpenHRPモデルファイル]を選択し、JVRC-1のモデルファイルを読み込みます。ファイル名は ~/catkin_ws/install/share/jvrc_models/model/JVRC-1/main.wrl です。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">モデルファイルは &#8220;World&#8221; アイテム内(階層の下位)に読み込みます。アイテムビュー内での階層関係・位置はシミュレーションの動作に影響するので注意してください。位置が異なる場合は、アイテムビュー内のアイテムをドラッグして移動することが可能です。</p>
+</div>
+<p>モデルを読み込んだだけではロボットは表示されません。 「アイテム」と書かれたリストのJVRC-1にチェックを入れてください。 すると、以下のようにロボットが表示されます。</p>
+<img alt="_images/model.png" src="_images/model.png" />
+</div>
+<div class="section" id="add-a-model-of-the-floor">
+<h2>床を追加する<a class="headerlink" href="#add-a-model-of-the-floor" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>シミュレーションを行うために、床(地面)を追加します。</p>
+<p>Choreonoid の画面にはアイテムと表示されている領域がありますが、これをアイテムビューと呼びます。 まずアイテムビューで「World」を選択します。 次に、[メニュー]-[ファイル]-[読み込み]-[OpenHRPモデルファイル]を選択し、床のモデルファイルを開きます。ファイル名は ~/catkin_ws/devel/share/choreonoid-1.5/model/misc/floor.wrl です。</p>
+</div>
+<div class="section" id="add-a-simulator-item">
+<h2>シミュレータアイテムを追加する<a class="headerlink" href="#add-a-simulator-item" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>アイテムビューで「World」を選択します。 次に、[メニュー]-[ファイル]-[新規]より「AISTシミュレータ」を選択し、AISTシミュレータ「AISTSimulator」を追加します。</p>
+<img alt="_images/aist_simulator.png" src="_images/aist_simulator.png" />
+</div>
+<div class="section" id="specify-initial-state-of-simulation">
+<h2>コントローラの選択<a class="headerlink" href="#specify-initial-state-of-simulation" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ロボットの位置・姿勢の初期状態を設定してプロジェクトに保存しておくことで、Choreonoidを起動し直してプロジェクトを読み込んだ際に設定していた初期状態からシミュレーションを開始することが可能です。初期状態の設定は以下の手順で行います。</p>
+<ol class="arabic">
+<li><p class="first">ボディ／リンクビューでルートリンクの位置・姿勢を編集することができます。</p>
+<img alt="_images/body_link_view.png" src="_images/body_link_view.png" />
+</li>
+<li><p class="first">関節スライダビューで関節の角度を編集することができます。</p>
+<img alt="_images/joint_slider_view.png" src="_images/joint_slider_view.png" />
+</li>
+<li><p class="first">シーンビュー上でインタラクティブに編集、逆運動学を用いた編集も可能です。インタラクティブ編集はシーンビューを編集モードに切り替えて行います。</p>
+</li>
+<li><p class="first">最後にシミュレーションバーの「現在の状態をワールド初期状態に設定」ボタンを押して初期状態を設定し、</p>
+<img alt="_images/simubar_save_world.png" src="_images/simubar_save_world.png" />
+<p>ファイルバーの「プロジェクトを保存」するのを忘れないでください。</p>
+<img alt="_images/filebar_save_project.png" src="_images/filebar_save_project.png" />
+</li>
+</ol>
+</div>
+<div class="section" id="basic-simulation-settings-time-step-simulation-time-integration-mode-friction">
+<h2>シミュレーションの基本設定（時間刻み、シミュレーション時間、積分モード、摩擦係数）<a class="headerlink" href="#basic-simulation-settings-time-step-simulation-time-integration-mode-friction" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="time-step">
+<h3>時間刻み<a class="headerlink" href="#time-step" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>1[ms] を推奨します。時間刻みは計算速度とシミュレーション精度のトレードオフであり、コントローラの実行周期との兼ね合いも考慮して設定します。</p>
+<ol class="arabic">
+<li><p class="first">タイムバーの設定ダイアログをボタンをクリックします。</p>
+<img alt="_images/timebar_config.png" src="_images/timebar_config.png" />
+</li>
+<li><p class="first">タイムバーの設定で、内部フレームレートの値を「1000」(1ms)に設定します。</p>
+<img alt="_images/timebar_config_framerate.png" src="_images/timebar_config_framerate.png" />
+</li>
+</ol>
+</div>
+<div class="section" id="simulation-time">
+<h3>シミュレーション時間<a class="headerlink" href="#simulation-time" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul>
+<li><p class="first">無制限</p>
+<ol class="arabic">
+<li><p class="first">アイテムビュー上で &#8220;AISTSimulator&#8221; アイテムを選択状態にします。</p>
+</li>
+<li><p class="first">プロパティビューの時間範囲の値をダブルクリックして変更します。</p>
+<img alt="_images/property_timerange.png" src="_images/property_timerange.png" />
+</li>
+</ol>
+</li>
+<li><p class="first">タイムバー範囲</p>
+<ol class="arabic">
+<li><p class="first">アイテムビュー上で &#8220;AISTSimulator&#8221; アイテムを選択状態にします。</p>
+</li>
+<li><p class="first">プロパティビューの時間範囲の値をダブルクリックして変更します。</p>
+<img alt="_images/property_timebarlimit.png" src="_images/property_timebarlimit.png" />
+</li>
+<li><p class="first">タイムバーの開始時間と終了時間を設定します。</p>
+<img alt="_images/timebar_timelimit.png" src="_images/timebar_timelimit.png" />
+</li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="section" id="integration-mode">
+<h3>積分モード<a class="headerlink" href="#integration-mode" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>物理シミュレーションのための微分方程式を解くための積分法として、ルンゲクッタ法とオイラー法を選択できます。多項式をより精密に計算できることからルンゲクッタ法を選択することを推奨します（オイラー法は理論上単項式しか精度よく計算できません）。</p>
+<p>積分モードを設定するには、AISTSimulatorアイテムを選択し、プロパティビュー上でパラメータを変更します。</p>
+<img alt="_images/property_integrationmode.png" src="_images/property_integrationmode.png" />
+</div>
+<div class="section" id="friction">
+<h3>摩擦係数<a class="headerlink" href="#friction" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>接触状態にある物体間の摩擦係数として「静止摩擦係数」と「動摩擦係数」を設定できます。静止摩擦係数は相対的に動いていない2物体間に働く摩擦係数です。動摩擦係数は相対的に動いている物体間に働く摩擦係数です。</p>
+<p>摩擦係数は、同じ係数がワールド内にある全ての物体間に適用されます。</p>
+<p>積分モードを設定するには、AISTSimulatorアイテムを選択し、プロパティビュー上でパラメータを変更します。</p>
+<img alt="_images/property_friction.png" src="_images/property_friction.png" />
+</div>
+</div>
+<div class="section" id="enable-cameras-and-range-sensors">
+<h2>カメラ、距離センサの有効化<a class="headerlink" href="#enable-cameras-and-range-sensors" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>シミュレーションにおいてカメラや距離センサを有効にするため、以下の作業を行います。</p>
+<p>アイテムビューで「AISTSimulator」を選択し、「新規」より「GLビジョンシミュレータ」を選択し、「GLVisionSimulator」という名前で追加します。</p>
+<img alt="_images/vision.png" src="_images/vision.png" />
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p>「対象ボディ」プロパティおよび「対象センサ」プロパティを空のままにしておくと、シミュレーション世界に存在するすべてのセンサがシミュレートされます。一方でこれらのプロパティを下図のように設定するとシミュレートするセンサを限定することができ、シミュレーション速度を向上させることができます。この例ではJVRCのrangerのみをシミュレーション対象としているため、頭部のカメラはシミュレートされないことになります。</p>
+<img alt="_images/vision_property.png" class="last" src="_images/vision_property.png" />
+</div>
+</div>
+<div class="section" id="run-simulation">
+<h2>シミュレーションを実行する<a class="headerlink" href="#run-simulation" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>次に、シミュレーションツールバーの「シミュレーション開始ボタン」を押します。 これにより、画面上でモデルのシミュレーションが開始されます。</p>
+<img alt="_images/simulation_start.png" src="_images/simulation_start.png" />
+<p>シミュレーションを実行すると下の画像のようにロボットはすぐに崩れ落ちてしまいます。</p>
+<img alt="_images/simulation_no_controller.png" src="_images/simulation_no_controller.png" />
+<p>これは全く関節の制御をしていないためです。</p>
+</div>
+<div class="section" id="save-a-project">
+<h2>プロジェクトの保存<a class="headerlink" href="#save-a-project" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>シミュレーションの実行が終わったら、プロジェクトを保存しておきましょう。「ファイル」の「名前を付けてプロジェクトを保存」を選択し、適当なファイル名を付けて保存します。</p>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="Choreonoid ROS プラグインチュートリアル" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="howto-use-choreonoid.html" class="btn btn-neutral" title="Choreonoidの基本操作" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Advanced Industrial Science and Technology (AIST).
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
