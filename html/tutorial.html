@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Choreonoid ROS Plugin Tutorial &mdash; trc-simulator 1.1.2 documentation</title>
+  <title>Choreonoid ROS Plugin Tutorial &mdash; trc-simulator 1.1.3 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="trc-simulator 1.1.2 documentation" href="index.html"/>
+    <link rel="top" title="trc-simulator 1.1.3 documentation" href="index.html"/>
         <link rel="next" title="Links" href="links.html"/>
         <link rel="prev" title="Creating a simulation project" href="howto-create-project.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.1.2
+                1.1.3
               </div>
             
           
@@ -200,7 +200,7 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
 
 <span class="c1">#</span>
 <span class="k">def</span> <span class="nf">publish_jvrc1_jointtrajectory</span><span class="p">(</span><span class="n">jname</span><span class="o">=</span><span class="s1">&#39;NECK_Y&#39;</span><span class="p">,</span> <span class="n">jdegree</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="n">rad</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;{0:.4f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">jdegree</span><span class="p">))))</span>
+    <span class="n">rad</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">jdegree</span><span class="p">)</span>
     <span class="n">pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;/JVRC_1/torque_control/set_joint_trajectory&#39;</span><span class="p">,</span> <span class="n">JointTrajectory</span><span class="p">,</span> <span class="n">latch</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
     <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;jvrc1_choreonoid_ros_test&#39;</span><span class="p">,</span> <span class="n">anonymous</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
     <span class="n">msg</span> <span class="o">=</span> <span class="n">JointTrajectory</span><span class="p">()</span>
@@ -252,7 +252,7 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
     <span class="k">print</span> <span class="s1">&#39;&#39;</span>
     <span class="k">print</span> <span class="s1">&#39;[joint angle] setting is range from 360.0 to -360.0.&#39;</span>
     <span class="k">print</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">print</span> <span class="s1">&#39;e.g. if you want to change the joint angle of the NECK_Y to dgree of 40.&#39;</span>
+    <span class="k">print</span> <span class="s1">&#39;e.g. if you want to change the joint angle of the NECK_Y to degree of 40.&#39;</span>
     <span class="k">print</span> <span class="s1">&#39;  &#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39; NECK_Y 40.0&#39;</span>
     <span class="k">print</span> <span class="s1">&#39;&#39;</span>
 
@@ -368,7 +368,7 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1.2',
+            VERSION:'1.1.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
