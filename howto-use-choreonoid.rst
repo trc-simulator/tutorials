@@ -146,7 +146,7 @@ Collision display
 
 During the simulation, we sometimes want to check the collision between the objects.
 To switch to the collision line visible mode, click "Toggle the collision line visibility" button of the scene bar.
-Then click on the AISTSimulator item on the item view and set the "Record collision data" property to True.
+Then click on the World item on the item view and set the "Collision detection" property to True.
 
 .. image:: images/scenebar_collision.png
    
