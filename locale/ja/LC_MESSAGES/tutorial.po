@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: hrpsys tutorials 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-20 15:47+0900\n"
-"PO-Revision-Date: 2016-03-29 14:03+0900\n"
+"PO-Revision-Date: 2016-03-30 12:26+0900\n"
 "Last-Translator: Yosuke Matsusaka <yosuke.matsusaka@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -65,16 +65,16 @@ msgstr ""
 msgid "Create and place BodyRos item under the robot you want to control."
 msgstr "操作するBody アイテムの下に、BodyRosアイテムを作成します。"
 
-#: ../../tutorial.rst:107
+#: ../../tutorial.rst:108
 msgid "Create and place WorldRos item under the world you want to control."
 msgstr "Worldアイテムの下にWorldRosアイテムを作成します。"
 
-#: ../../tutorial.rst:109
+#: ../../tutorial.rst:110
 msgid ""
 "Item view should be structured as follows after the above configuration."
 msgstr "上記の設定を行うと、アイテムビューは以下のような構造になります。"
 
-#: ../../tutorial.rst:113
+#: ../../tutorial.rst:120
 msgid "Finally, click \"start simulation\" button to enable the ROS functions."
 msgstr ""
 "最後に「シミュレーション開始」ボタンを押すとROS接続機能が有効になります。"
@@ -159,6 +159,27 @@ msgid ""
 "control."
 msgstr ""
 "操作するBodyアイテムの下に、BodyRosTorqueController アイテムを作成します。"
+
+#: ../../tutorial.rst:114
+msgid ""
+"If the roscore has not been started, start the roscore in a different "
+"terminnal."
+msgstr "roscore を起動していない場合、別の端末で roscore を起動します。"
+
+#: ../../tutorial.rst:107
+msgid ""
+"To prevent the robot from falling, add a model of the ground. Please details "
+"see 'Add a model of the floor'."
+msgstr ""
+"シミュレーションを行うために、床(地面)を追加します。詳細は「シミュレーション"
+"プロジェクトの作成」の章の「床を追加する」を参照してください。"
+
+#~ msgid ""
+#~ "To prevent the robot from falling, add a model of the ground. details see "
+#~ "'Add a model of the floor'."
+#~ msgstr ""
+#~ "シミュレーションを行うために、床(地面)を追加します。詳細は「シミュレーショ"
+#~ "ンプロジェクト」の章の「床を追加する」を参照してください。"
 
 #~ msgid ""
 #~ "Configure AISTSimulator item to use Foward dynamics mode or High-gain "
