@@ -70,9 +70,7 @@ Setting of initial state can be applied as follows:
 
    .. image:: images/simubar_save_world.png
 
-   And don't forget to press the "Save the project" button on the file bar.
-
-   .. image:: images/filebar_save_project.png
+   And don't forget to save the project. Choose "Save Project As" menu in "File" menu and name the project file.
 
 
 Basic simulation settings (time step, simulation time, integration mode, friction)
@@ -172,10 +170,13 @@ Just after starting simulation, the robot falls down.
 
 Because all joints are not controlled but free.
 
-Save a project
---------------
+Update a project
+----------------
 
-After running simulation, let's save the project. Choose "Save Project As" menu in "File" menu and name the project file.
+After running simulation, let's update the project. press the "Save the project" button on the file bar.
+update the project in currently status.
+
+.. image:: images/filebar_save_project.png
 
 .. toctree::
    :maxdepth: 2
