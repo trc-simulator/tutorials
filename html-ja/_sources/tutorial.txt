@@ -104,11 +104,18 @@ To prepare your own project:
 3. (Optional) Create and place ViewSimulator item under the AISTSimulator you want to get image input.
 4. Create and place BodyRos item under the robot you want to control.
 5. Create and place BodyRosTorqueController item under the robot you want to control.
-6. Create and place WorldRos item under the world you want to control.
+6. To prevent the robot from falling, add a model of the ground. Please details see 'Add a model of the floor'.
+7. Create and place WorldRos item under the world you want to control.
 
 Item view should be structured as follows after the above configuration.
 
 .. image:: images/itemview-forward.png
+
+If the roscore has not been started, start the roscore in a different terminnal.
+
+.. code-block:: bash
+
+   $ roscore
 
 Finally, click "start simulation" button to enable the ROS functions.
 

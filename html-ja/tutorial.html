@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Choreonoid ROS プラグインチュートリアル &mdash; trc-simulator 1.1.1 ドキュメント</title>
+  <title>Choreonoid ROS プラグインチュートリアル &mdash; trc-simulator 1.1.2 ドキュメント</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="trc-simulator 1.1.1 ドキュメント" href="index.html"/>
+    <link rel="top" title="trc-simulator 1.1.2 ドキュメント" href="index.html"/>
         <link rel="next" title="リンク" href="links.html"/>
         <link rel="prev" title="シミュレーションプロジェクトの作成" href="howto-create-project.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.1.1
+                1.1.2
               </div>
             
           
@@ -322,11 +322,17 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
 </li>
 <li><p class="first">操作するBodyアイテムの下に、BodyRosTorqueController アイテムを作成します。</p>
 </li>
+<li><p class="first">シミュレーションを行うために、床(地面)を追加します。詳細は「シミュレーションプロジェクトの作成」の章の「床を追加する」を参照してください。</p>
+</li>
 <li><p class="first">Worldアイテムの下にWorldRosアイテムを作成します。</p>
 </li>
 </ol>
 <p>上記の設定を行うと、アイテムビューは以下のような構造になります。</p>
 <img alt="_images/itemview-forward.png" src="_images/itemview-forward.png" />
+<p>roscore を起動していない場合、別の端末で roscore を起動します。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ roscore
+</pre></div>
+</div>
 <p>最後に「シミュレーション開始」ボタンを押すとROS接続機能が有効になります。</p>
 </div>
 </div>
@@ -372,7 +378,7 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1.1',
+            VERSION:'1.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

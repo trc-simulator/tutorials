@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Choreonoid ROS Plugin Tutorial &mdash; trc-simulator 1.1.1 documentation</title>
+  <title>Choreonoid ROS Plugin Tutorial &mdash; trc-simulator 1.1.2 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="trc-simulator 1.1.1 documentation" href="index.html"/>
+    <link rel="top" title="trc-simulator 1.1.2 documentation" href="index.html"/>
         <link rel="next" title="Links" href="links.html"/>
         <link rel="prev" title="Creating a simulation project" href="howto-create-project.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.1.1
+                1.1.2
               </div>
             
           
@@ -314,10 +314,15 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
 <li>(Optional) Create and place ViewSimulator item under the AISTSimulator you want to get image input.</li>
 <li>Create and place BodyRos item under the robot you want to control.</li>
 <li>Create and place BodyRosTorqueController item under the robot you want to control.</li>
+<li>To prevent the robot from falling, add a model of the ground. Please details see &#8216;Add a model of the floor&#8217;.</li>
 <li>Create and place WorldRos item under the world you want to control.</li>
 </ol>
 <p>Item view should be structured as follows after the above configuration.</p>
 <img alt="_images/itemview-forward.png" src="_images/itemview-forward.png" />
+<p>If the roscore has not been started, start the roscore in a different terminnal.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ roscore
+</pre></div>
+</div>
 <p>Finally, click &#8220;start simulation&#8221; button to enable the ROS functions.</p>
 </div>
 </div>
@@ -363,7 +368,7 @@ $ rosrun image_view image_view image:<span class="o">=</span>/JVRC_1/rcamera/ima
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1.1',
+            VERSION:'1.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
